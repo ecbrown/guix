@@ -21155,5 +21155,5 @@ function as described in Ardia et al. (2009).  The mixture approximation can
 then be used as the importance density in importance sampling or as the
 candidate density in the Metropolis-Hastings algorithm to obtain quantities of
 interest for the target density itself.")
-    (license gpl2+)))
+    (license license:gpl2+)))
 
