@@ -14,7 +14,7 @@
 ;;; Copyright © 2018 Laura Lazzati <laura.lazzati.15@gmail.com>
 ;;; Copyright © 2018 Leo Famulari <leo@famulari.name>
 ;;; Copyright © 2018 Marius Bakke <mbakke@fastmail.com>
-;;; Copyright © 2018 Eric Brown <brown@fastmail.com>
+;;; Copyright © 2018, 2020 Eric Brown <ecbrown@ericcbrown.com>
 ;;; Copyright © 2018, 2019 Brett Gilio <brettg@gnu.org>
 ;;; Copyright © 2019 Nicolò Balzarotti <anothersms@gmail.com>
 ;;; Copyright © 2019 Wiktor Żelazny <wzelazny@vurv.cz>
@@ -21131,3 +21131,29 @@ vignettes from notebooks.  Those notebooks (@code{.ipynb} files) are files
 containing rich text, code, and its output.  Code cells can be edited and
 evaluated interactively.")
     (license license:gpl3)))
+
+(define-public r-admit
+  (package
+    (name "r-admit")
+    (version "2.1.4")
+    (source
+     (origin
+       (method url-fetch)
+       (uri (cran-uri "AdMit" version))
+       (sha256
+        (base32
+         "0p7ks4fwwnjagwzarl69mb6hp2d0238pqwla9gx61y1bb3gmcncn"))))
+    (properties `((upstream-name . "AdMit")))
+    (build-system r-build-system)
+    (propagated-inputs `(("r-mvtnorm" ,r-mvtnorm)))
+    (home-page "https://github.com/ArdiaD/AdMit")
+    (synopsis "Adaptive Mixture of Student-t Distributions")
+    (description
+     "This package provides functions to perform the fitting of an adaptive
+mixture of Student-t distributions to a target density through its kernel
+function as described in Ardia et al. (2009).  The mixture approximation can
+then be used as the importance density in importance sampling or as the
+candidate density in the Metropolis-Hastings algorithm to obtain quantities of
+interest for the target density itself.")
+    (license gpl2+)))
+
