@@ -366,6 +366,7 @@ GNU_SYSTEM_MODULES =				\
   %D%/packages/music.scm			\
   %D%/packages/musl.scm				\
   %D%/packages/mtools.scm			\
+  %D%/packages/my-cran.scm                      \
   %D%/packages/nano.scm				\
   %D%/packages/ncdu.scm				\
   %D%/packages/ncurses.scm			\
