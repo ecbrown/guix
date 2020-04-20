@@ -22,6 +22,7 @@
 ;;; along with GNU Guix.  If not, see <http://www.gnu.org/licenses/>.
 
 (define-module (guix packages)
+  #:use-module (guix ui)
   #:use-module (guix utils)
   #:use-module (guix records)
   #:use-module (guix store)
@@ -984,7 +985,8 @@ Return the cached result when available."
     ((_ package system body ...)
      (cached (=> %derivation-cache) package system body ...))))
 
-(define* (expand-input store package input system #:optional cross-system)
+(define* (expand-input store package input system #:optional cross-system
+                       #:key seen-packages seen-package-list)
   "Expand INPUT, an input tuple, such that it contains only references to
 derivation paths or store paths.  PACKAGE is only used to provide contextual
 information in exceptions."
@@ -997,7 +999,9 @@ information in exceptions."
     (if cross-system
         (cut package-cross-derivation store <> cross-system system
              #:graft? #f)
-        (cut package-derivation store <> system #:graft? #f)))
+        (cut package-derivation store <> system #:graft? #f
+             #:seen-packages seen-packages
+             #:seen-package-list seen-package-list)))
 
   (match input
     (((? string? name) (? package? package))
@@ -1202,7 +1206,8 @@ TARGET."
     (bag-grafts store bag)))
 
 (define* (bag->derivation store bag
-                          #:optional context)
+                          #:optional context
+                          #:key seen-packages seen-package-list)
   "Return the derivation to build BAG for SYSTEM.  Optionally, CONTEXT can be
 a package object describing the context in which the call occurs, for improved
 error reporting."
@@ -1210,7 +1215,9 @@ error reporting."
       (bag->cross-derivation store bag)
       (let* ((system     (bag-system bag))
              (inputs     (bag-transitive-inputs bag))
-             (input-drvs (map (cut expand-input store context <> system)
+             (input-drvs (map (cut expand-input store context <> system
+                                   #:seen-packages seen-packages
+                                   #:seen-package-list seen-package-list)
                               inputs))
              (paths      (delete-duplicates
                           (append-map (match-lambda
@@ -1227,20 +1234,27 @@ error reporting."
                (bag-arguments bag)))))
 
 (define* (bag->cross-derivation store bag
-                                #:optional context)
+                                #:optional context
+                                #:key seen-packages seen-package-list)
   "Return the derivation to build BAG, which is actually a cross build.
 Optionally, CONTEXT can be a package object denoting the context of the call.
 This is an internal procedure."
   (let* ((system      (bag-system bag))
          (target      (bag-target bag))
          (host        (bag-transitive-host-inputs bag))
-         (host-drvs   (map (cut expand-input store context <> system target)
+         (host-drvs   (map (cut expand-input store context <> system target
+                                #:seen-packages seen-packages
+                                #:seen-package-list seen-package-list)
                            host))
          (target*     (bag-transitive-target-inputs bag))
-         (target-drvs (map (cut expand-input store context <> system)
+         (target-drvs (map (cut expand-input store context <> system
+                                #:seen-packages seen-packages
+                                #:seen-package-list seen-package-list)
                            target*))
          (build       (bag-transitive-build-inputs bag))
-         (build-drvs  (map (cut expand-input store context <> system)
+         (build-drvs  (map (cut expand-input store context <> system
+                                #:seen-packages seen-packages
+                                #:seen-package-list seen-package-list)
                            build))
          (all         (append build target* host))
          (paths       (delete-duplicates
@@ -1269,15 +1283,40 @@ This is an internal procedure."
 
 (define* (package-derivation store package
                              #:optional (system (%current-system))
-                             #:key (graft? (%graft?)))
+                             #:key (graft? (%graft?))
+                             (seen-packages (setq))
+                             (seen-package-list '()))
   "Return the <derivation> object of PACKAGE for SYSTEM."
+
+  (if (set-contains? seen-packages package)
+      (begin
+        (simple-format #t "\nerror: input loop detected, error generating a derivation for ~A\n"
+                       (last seen-package-list))
+        (display "
+This shouldn't happen with Guix packages, please consider reporting a bug.\n")
+        (show-bug-report-information)
+        (display " If any of the packages below are not included in Guix, it
+could be that one of them is causing the loop. The packages are listed in
+reverse order, so the first package listed is a input to the second package
+for example, and the start and end of the detected loop is highlighted with an arrow (--->).\n\n")
+        (for-each (lambda (seen-package)
+                    (if (eq? package seen-package)
+                        (display " --->"))
+                    (simple-format #t "\t~A\n" seen-package))
+                  (cons package
+                        seen-package-list))
+        (exit 1)))
 
   ;; Compute the derivation and cache the result.  Caching is important
   ;; because some derivations, such as the implicit inputs of the GNU build
   ;; system, will be queried many, many times in a row.
   (cached package (cons system graft?)
           (let* ((bag (package->bag package system #f #:graft? graft?))
-                 (drv (bag->derivation store bag package)))
+                 (drv (bag->derivation store bag package
+                                       #:seen-packages
+                                       (set-insert package seen-packages)
+                                       #:seen-package-list
+                                       (cons package seen-package-list))))
             (if graft?
                 (match (bag-grafts store bag)
                   (()
