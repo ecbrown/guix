@@ -1475,7 +1475,7 @@ that helps in Qt development.")))
 The following guides and references cover aspects of programming with
 ECMAScript and Qt.")))
 
-(define-public qtquickcontrols
+(define-public qtquickcontrols-2-5
   (package (inherit qtsvg-5)
     (name "qtquickcontrols")
     (version "5.15.2")
