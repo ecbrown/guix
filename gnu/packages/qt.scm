@@ -22,6 +22,7 @@
 ;;; Copyright © 2020 Maxim Cournoyer <maxim.cournoyer@gmail.com>
 ;;; Copyright © 2021 Brendan Tildesley <mail@brendan.scot>
 ;;; Copyright © 2021 Guillaume Le Vaillant <glv@posteo.net>
+;;; Copyright © 2021 Eric Brown <ecbrown@ericcbrown.com>
 ;;;
 ;;; This file is part of GNU Guix.
 ;;;
@@ -300,11 +301,11 @@ system, and the core design of Django is reused in Grantlee.")
 
 (define-public qtbase-5
   (package
-    (name "qtbase")
+    (name "qtbase-5")
     (version "5.15.2")
     (source (origin
              (method url-fetch)
-             (uri (qt5-urls name version))
+             (uri (qt5-urls "qtbase" version))
              (sha256
               (base32
                "1y70libf2x52lpbqvhz10lpk7nyl1ajjwzjxly9pjdpfj4jsv7wh"))
@@ -556,13 +557,13 @@ developers using C++ or QML, a CSS & JavaScript like language.")
 (define-public qtbase
   (package/inherit qtbase-5
     (name "qtbase")
-    (version "6.0.3")
+    (version "6.1.0")
     (source (origin
               (inherit (package-source qtbase-5))
               (uri (qt5-urls name version))
               (sha256
                (base32
-                "156k21z8xqg0jxipil1dfrly42dkrd0fmqshbii6969l58fbci8s"))
+                "1i0l13nk6v8hnhfzxss1yaz32c63fy1cirmwbadx0lb0x63krbzp"))
               (modules '((guix build utils)))
               (snippet
                ;; corelib uses bundled harfbuzz, md4, md5, sha3
@@ -632,9 +633,6 @@ developers using C++ or QML, a CSS & JavaScript like language.")
                (substitute* "src/gui/platform/unix/qgenericunixservices.cpp"
                  (("\"xdg-open\"")
                   (format #f "~s" (which "xdg-open"))))
-               (substitute* "src/corelib/global/global.pri"
-                 (("/bin/ls")
-                  (which "ls")))
                (substitute* '("mkspecs/features/qt_functions.prf"
                               "qmake/library/qmakebuiltins.cpp")
                  (("/bin/sh")
