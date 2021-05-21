@@ -1267,7 +1267,7 @@ compositor libraries.")))
     (description "The Qt Serial Port module provides the library for
 interacting with serial ports from within Qt.")))
 
-(define-public qtserialbus
+(define-public qtserialbus-5
   (package (inherit qtsvg-5)
     (name "qtserialbus")
     (version "5.15.2")
