@@ -69,7 +69,7 @@
        ("kxmlgui" ,kxmlgui)
        ("oxygen-icons" ,oxygen-icons) ;; default icon set
        ("qtbase" ,qtbase-5)
-       ("qtscript" ,qtscript)))
+       ("qtscript" ,qtscript-5)))
     (arguments
      `(#:tests? #f ;; 2/7 tests fail
        #:phases
@@ -364,7 +364,7 @@ either be created or generated from a image.")
        ("oxygen-icons" ,oxygen-icons) ;; default icon set
        ("qca" ,qca)
        ("qtbase" ,qtbase-5)
-       ("qtscript" ,qtscript)))
+       ("qtscript" ,qtscript-5)))
     (arguments
      `(#:phases
        (modify-phases %standard-phases

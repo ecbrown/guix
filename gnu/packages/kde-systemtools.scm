@@ -214,7 +214,7 @@ document meta data file.")
        ("kxmlgui" ,kxmlgui)
        ("oxygen-icons" ,oxygen-icons) ;; default icon set
        ("qtbase" ,qtbase-5)
-       ("qtscript" ,qtscript)))
+       ("qtscript" ,qtscript-5)))
     (arguments
      `(#:tests? #f)) ;; TODO: 2/15 tests fail even with HOME, offscreen, SHELL, debus
     (home-page "http://www.kde.org/")

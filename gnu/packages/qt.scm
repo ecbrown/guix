@@ -264,7 +264,7 @@ applications on Wayland.")
     (inputs
      `(("qtbase" ,qtbase-5)
        ("qtdeclarative" ,qtdeclarative-5)
-       ("qtscript" ,qtscript)))
+       ("qtscript" ,qtscript-5)))
     (build-system cmake-build-system)
     (arguments
      `(#:phases
@@ -1454,7 +1454,7 @@ that helps in Qt development.")))
 the documentation, translate applications, generate help files and other stuff
 that helps in Qt development.")))
 
-(define-public qtscript
+(define-public qtscript-5
   (package (inherit qtsvg-5)
     (name "qtscript")
     (version "5.15.2")
@@ -3060,7 +3060,7 @@ color-related widgets.")
        ("qtlocation" ,qtlocation-5)
        ("qtmultimedia" ,qtmultimedia-5)
        ("qtquickcontrols" ,qtquickcontrols)
-       ("qtscript" ,qtscript)
+       ("qtscript" ,qtscript-5)
        ("qtscxml" ,qtscxml)
        ("qtsensors" ,qtsensors-5)
        ("qtspeech" ,qtspeech)

@@ -4745,7 +4745,7 @@ standalone JACK client and an LV2 plugin is also available.")
        ("qtbase" ,qtbase-5)
        ("qtdeclarative" ,qtdeclarative-5)
        ("qtquickcontrols2" ,qtquickcontrols2)
-       ("qtscript" ,qtscript)
+       ("qtscript" ,qtscript-5)
        ("qtsvg" ,qtsvg-5)
        ("qtxmlpatterns" ,qtxmlpatterns-5)))
     (native-inputs

@@ -415,7 +415,7 @@ deconvolution).  Such post-processing is not performed by Stackistry.")
      `(("qtbase" ,qtbase-5)
        ("qtlocation" ,qtlocation-5)
        ("qtmultimedia" ,qtmultimedia-5)
-       ("qtscript" ,qtscript)
+       ("qtscript" ,qtscript-5)
        ("qtserialport" ,qtserialport-5)
        ("zlib" ,zlib)))
     (native-inputs

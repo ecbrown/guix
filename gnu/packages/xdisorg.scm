@@ -318,7 +318,7 @@ with X11 or Wayland, or in a text terminal with ncurses.")
      #:tests? #f)) ; Test suite is a rather manual process.
   (inputs
    `(("qtbase" ,qtbase-5)
-     ("qtscript" ,qtscript)
+     ("qtscript" ,qtscript-5)
      ("qtsvg" ,qtsvg-5)
      ("qtx11extras" ,qtx11extras-5)))
   (synopsis "Clipboard manager with advanced features")

@@ -132,7 +132,7 @@
        ("qca" ,qca)
        ("qtbase" ,qtbase-5)
        ("qtmultimedia" ,qtmultimedia-5)
-       ("qtscript" ,qtscript)
+       ("qtscript" ,qtscript-5)
        ("qtsvg" ,qtsvg-5)
        ("snorenotify" ,snorenotify)
        ("zlib" ,zlib)))

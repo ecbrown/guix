@@ -2701,7 +2701,7 @@ export filters.")
     (build-system cmake-build-system)
     (inputs
      `(("qtbase" ,qtbase-5)
-       ("qtscript" ,qtscript)
+       ("qtscript" ,qtscript-5)
        ("qtxmlpatterns" ,qtxmlpatterns-5)
        ("mesa" ,mesa)
        ("glu" ,glu)

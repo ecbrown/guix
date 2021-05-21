@@ -6501,7 +6501,7 @@ PDF documents.")
     (inputs
      `(("poppler-qt5" ,poppler-qt5)
        ("qtbase" ,qtbase-5)
-       ("qtscript" ,qtscript)
+       ("qtscript" ,qtscript-5)
        ("qtwebkit" ,qtwebkit)
        ("zlib" ,zlib)))
     (native-inputs

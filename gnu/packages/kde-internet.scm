@@ -413,7 +413,7 @@ This package is part of the KDE networking module.")
        ("oxygen-icons" ,oxygen-icons) ; default icon set
        ("phonon" ,phonon)
        ("qtbase" ,qtbase-5)
-       ("qtscript" ,qtscript)
+       ("qtscript" ,qtscript-5)
        ("qtwebkit" ,qtwebkit)
        ("solid" ,solid)
        ("syndication" ,syndication)
