@@ -375,7 +375,7 @@ audio or video backends, ensuring good performance.")
                  #t))))))
       (inputs
        `(("qt" ,qtbase-5)
-         ("qtmultimedia" ,qtmultimedia)
+         ("qtmultimedia" ,qtmultimedia-5)
          ("libsndfile" ,libsndfile)))
       (native-inputs
        `(("qttools" ,qttools)))
@@ -406,7 +406,7 @@ waveform until they line up with the proper sounds.")
     (inputs
      `(("qtbase" ,qtbase-5)
        ("qtxmlpatterns" ,qtxmlpatterns-5)
-       ("qtmultimedia" ,qtmultimedia)
+       ("qtmultimedia" ,qtmultimedia-5)
        ("qtsvg" ,qtsvg-5)))
     (arguments
      `(#:phases

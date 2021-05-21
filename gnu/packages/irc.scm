@@ -131,7 +131,7 @@
        ("libdbusmenu-qt" ,libdbusmenu-qt)
        ("qca" ,qca)
        ("qtbase" ,qtbase-5)
-       ("qtmultimedia" ,qtmultimedia)
+       ("qtmultimedia" ,qtmultimedia-5)
        ("qtscript" ,qtscript)
        ("qtsvg" ,qtsvg-5)
        ("snorenotify" ,snorenotify)

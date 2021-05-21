@@ -1473,7 +1473,7 @@ of the same name.")
        ("lua" ,lua-5.2)                 ;Lua 5.3 unsupported
        ("krb5" ,mit-krb5)
        ("qtbase" ,qtbase-5)
-       ("qtmultimedia" ,qtmultimedia)
+       ("qtmultimedia" ,qtmultimedia-5)
        ("qtsvg" ,qtsvg-5)
        ("sbc" ,sbc)
        ("snappy" ,snappy)

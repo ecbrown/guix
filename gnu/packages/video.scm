@@ -926,7 +926,7 @@ H.264 (MPEG-4 AVC) video streams.")
        ("pcre2" ,pcre2)
        ("pugixml" ,pugixml)
        ("qtbase" ,qtbase-5)
-       ("qtmultimedia" ,qtmultimedia)
+       ("qtmultimedia" ,qtmultimedia-5)
        ("utfcpp" ,utfcpp)
        ("zlib" ,zlib)))
     (native-inputs
@@ -4475,7 +4475,7 @@ create smoother and stable videos.")
        ("jsoncpp" ,jsoncpp)
        ("libopenshot-audio" ,libopenshot-audio)
        ("qtbase" ,qtbase-5)
-       ("qtmultimedia" ,qtmultimedia)
+       ("qtmultimedia" ,qtmultimedia-5)
        ("zeromq" ,zeromq)))
     (arguments
      `(#:configure-flags

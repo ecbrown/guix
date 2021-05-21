@@ -193,7 +193,7 @@ of categories with some of the activities available in that category.
        ("qtbase" ,qtbase-5)
        ("qtdeclarative" ,qtdeclarative-5)
        ("qtgraphicaleffects" ,qtgraphicaleffects)
-       ("qtmultimedia" ,qtmultimedia)
+       ("qtmultimedia" ,qtmultimedia-5)
        ("qtquickcontrols" ,qtquickcontrols)
        ("qtsensors" ,qtsensors-5)
        ("qtsvg" ,qtsvg-5)
@@ -260,7 +260,7 @@ Currently available boards include:
                (invoke "qmake")))))))
     (inputs
      `(("qtbase" ,qtbase-5)
-       ("qtmultimedia" ,qtmultimedia)))
+       ("qtmultimedia" ,qtmultimedia-5)))
     (home-page "https://www.tipp10.com/")
     (synopsis "Touch typing tutor")
     (description "Tipp10 is a touch typing tutor.  The ingenious thing about

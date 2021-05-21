@@ -620,7 +620,7 @@ The following systems are supported:
               ("minizip" ,minizip)
               ("ncurses" ,ncurses)
               ("qtbase" ,qtbase-5)
-              ("qtmultimedia" ,qtmultimedia)
+              ("qtmultimedia" ,qtmultimedia-5)
               ("sdl2" ,sdl2)
               ("sqlite" ,sqlite)
               ("zlib" ,zlib)))

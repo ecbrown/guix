@@ -229,7 +229,7 @@
     (inputs
      `(("dbus" ,dbus)
        ("qtbase" ,qtbase-5)
-       ("qtmultimedia" ,qtmultimedia)
+       ("qtmultimedia" ,qtmultimedia-5)
        ;; Plugin dependencies
        ("alsa-lib" ,alsa-lib)
        ("curl" ,curl)
@@ -5502,7 +5502,7 @@ discard bad quality ones.
        ("jack" ,jack-1)
        ("portaudio" ,portaudio)
        ("qtbase" ,qtbase-5)
-       ("qtmultimedia" ,qtmultimedia)
+       ("qtmultimedia" ,qtmultimedia-5)
        ("qtsvg" ,qtsvg-5)))
     (native-inputs
      `(("gettext" ,gettext-minimal)

@@ -172,7 +172,7 @@ This package is part of the KDE multimedia module.")
        ("qtbase" ,qtbase-5)
        ("qtdeclarative" ,qtdeclarative-5)
        ("qtgraphicaleffects" ,qtgraphicaleffects) ; not listed as dependency
-       ("qtmultimedia" ,qtmultimedia)
+       ("qtmultimedia" ,qtmultimedia-5)
        ("qtquickcontrols" ,qtquickcontrols)
        ("qtquickcontrols2" ,qtquickcontrols2)
        ("qtsvg" ,qtsvg-5)
@@ -643,7 +643,7 @@ Some features:
        ("oxygen-icons" ,oxygen-icons) ; default icon set
        ("pulseaudio" ,pulseaudio)
        ("qtbase" ,qtbase-5)
-       ("qtmultimedia" ,qtmultimedia)
+       ("qtmultimedia" ,qtmultimedia-5)
        ("zlib" ,zlib)))
     (home-page "https://kde.org/applications/multimedia/org.kde.kwave")
     (synopsis "Sound editor for KDE")

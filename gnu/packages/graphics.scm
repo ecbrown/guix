@@ -1937,7 +1937,7 @@ Automated palette selection is supported.")
          ;; ("miniupnpc" ,miniupnpc) ;segfaults for some reason
          ("qtbase" ,qtbase-5)
          ("qtkeychain" ,qtkeychain)
-         ("qtmultimedia" ,qtmultimedia)
+         ("qtmultimedia" ,qtmultimedia-5)
          ("qtsvg" ,qtsvg-5)
          ("qtx11extras" ,qtx11extras-5)))
       (home-page "https://drawpile.net")

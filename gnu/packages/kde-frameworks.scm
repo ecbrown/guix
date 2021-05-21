@@ -1774,7 +1774,7 @@ from DocBook files.")
        ("karchive" ,karchive)
        ("kcoreaddons" ,kcoreaddons)
        ("ki18n" ,ki18n)
-       ("qtmultimedia" ,qtmultimedia)
+       ("qtmultimedia" ,qtmultimedia-5)
        ("qtbase" ,qtbase-5)
        ;; Required run-time packages
        ("catdoc" ,catdoc)

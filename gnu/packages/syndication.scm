@@ -567,7 +567,7 @@ formats, including all versions of RSS and Atom.")
     (inputs
      `(("qtwebkit" ,qtwebkit)
        ("qtbase" ,qtbase-5)
-       ("qtmultimedia" ,qtmultimedia)
+       ("qtmultimedia" ,qtmultimedia-5)
        ("phonon" ,phonon)
        ("sqlite" ,sqlite)))
     (home-page "https://quiterss.org/")
