@@ -2734,7 +2734,7 @@ different audio devices such as ALSA or PulseAudio.")
        ("alsa-lib" ,alsa-lib)
        ("portaudio" ,portaudio)
        ("qtbase" ,qtbase-5)
-       ("qtx11extras" ,qtx11extras)))
+       ("qtx11extras" ,qtx11extras-5)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
        ("qttools" ,qttools)))
@@ -3559,7 +3559,7 @@ interface.")
     (inputs
      `(("fluidsynth" ,fluidsynth)
        ("qtbase" ,qtbase-5)
-       ("qtx11extras" ,qtx11extras)))
+       ("qtx11extras" ,qtx11extras-5)))
     (home-page "https://qsynth.sourceforge.io")
     (synopsis "Graphical user interface for FluidSynth")
     (description

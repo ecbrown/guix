@@ -1939,7 +1939,7 @@ Automated palette selection is supported.")
          ("qtkeychain" ,qtkeychain)
          ("qtmultimedia" ,qtmultimedia)
          ("qtsvg" ,qtsvg-5)
-         ("qtx11extras" ,qtx11extras)))
+         ("qtx11extras" ,qtx11extras-5)))
       (home-page "https://drawpile.net")
       (synopsis "Collaborative drawing program")
       (description "Drawpile is a drawing program that allows share the canvas

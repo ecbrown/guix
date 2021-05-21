@@ -364,7 +364,7 @@ including input methods previous bundled inside Fcitx 4:
      `(("fcitx5" ,fcitx5)
        ("fcitx5-qt" ,fcitx5-qt)
        ("qtbase" ,qtbase-5)
-       ("qtx11extras" ,qtx11extras)
+       ("qtx11extras" ,qtx11extras-5)
        ("kitemviews" ,kitemviews)
        ("kwidgetsaddons" ,kwidgetsaddons)
        ("libx11" ,libx11)

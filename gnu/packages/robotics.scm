@@ -111,7 +111,7 @@ hundred times faster than real-time.")
          ("qtsvg" ,qtsvg-5)
          ("qttools" ,qttools)              ;for libQt5Help, needed by "studio"
          ("qtwebkit" ,qtwebkit)
-         ("qtx11extras" ,qtx11extras)
+         ("qtx11extras" ,qtx11extras-5)
          ("eudev" ,eudev)
          ("libxml2" ,libxml2)
          ("sdl2" ,sdl2)

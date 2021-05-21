@@ -769,7 +769,7 @@ model to base your own plug-in on, here it is.")
        ("orc" ,orc)
        ;("qtbase" ,qtbase-5)
        ;("qtdeclarative" ,qtdeclarative)
-       ;("qtx11extras" ,qtx11extras)
+       ;("qtx11extras" ,qtx11extras-5)
        ("soundtouch" ,soundtouch)
        ;; GStreamer is not yet compatible with srt > 1.4.1.
        ("srt" ,srt-1.4.1)

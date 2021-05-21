@@ -176,7 +176,7 @@ This package is part of the KDE multimedia module.")
        ("qtquickcontrols" ,qtquickcontrols)
        ("qtquickcontrols2" ,qtquickcontrols2)
        ("qtsvg" ,qtsvg-5)
-       ("qtx11extras" ,qtx11extras)
+       ("qtx11extras" ,qtx11extras-5)
        ;; TODO: upnpqt https://gitlab.com/homeautomationqt/upnp-player-qt
        ("vlc" ,vlc)))
     (arguments
@@ -415,7 +415,7 @@ available CD drives.")
        ("libxscrnsaver" ,libxscrnsaver)
        ("oxygen-icons" ,oxygen-icons) ; default icon set
        ("qtbase" ,qtbase-5)
-       ("qtx11extras" ,qtx11extras)
+       ("qtx11extras" ,qtx11extras-5)
        ("solid" ,solid)
        ("v4l-utils" ,v4l-utils) ; libdvbv5
        ("vlc" ,vlc)))
@@ -473,7 +473,7 @@ autoloading of subtitle files for use while playing video.")
        ("qtgraphicaleffects" ,qtgraphicaleffects)
        ("qtquickcontrols" ,qtquickcontrols)
        ("qtquickcontrols2" ,qtquickcontrols2) ; not listed as dependency
-       ("qtx11extras" ,qtx11extras)))
+       ("qtx11extras" ,qtx11extras-5)))
     (arguments
      `(#:tests? #f ; test program gets built, but is not found
        #:configure-flags
@@ -569,7 +569,7 @@ This package is part of the KDE multimedia module.")
        ("qtbase" ,qtbase-5)
        ("cairo" ,cairo)
        ("qtsvg" ,qtsvg-5)
-       ("qtx11extras" ,qtx11extras)
+       ("qtx11extras" ,qtx11extras-5)
        ("xcb-util" ,xcb-util)
        ("xcb-util-cursor" ,xcb-util-cursor)
        ("xcb-util-errors" ,xcb-util-errors)

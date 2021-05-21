@@ -319,7 +319,7 @@ great on your desktop.")
      `(("ktexteditor" ,ktexteditor)
        ("imagemagick" ,imagemagick)
        ("qtbase" ,qtbase-5)
-       ("qtx11extras" ,qtx11extras)))
+       ("qtx11extras" ,qtx11extras-5)))
     (home-page "https://kde.org/applications/en/graphics/org.kde.kxstitch")
     (synopsis "Create and print cross stitch patterns")
     (description

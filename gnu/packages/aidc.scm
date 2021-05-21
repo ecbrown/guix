@@ -196,7 +196,7 @@ C/C++ programs to use its capabilities without restrictions or overhead.")
        ("libjpeg" ,libjpeg-turbo)
        ("python" ,python)
        ("qtbase" ,qtbase-5)
-       ("qtx11extras" ,qtx11extras)
+       ("qtx11extras" ,qtx11extras-5)
        ("v4l-utils" ,v4l-utils)))
     (synopsis "Bar code reader")
     (description

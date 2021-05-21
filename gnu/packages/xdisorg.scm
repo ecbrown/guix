@@ -320,7 +320,7 @@ with X11 or Wayland, or in a text terminal with ncurses.")
    `(("qtbase" ,qtbase-5)
      ("qtscript" ,qtscript)
      ("qtsvg" ,qtsvg-5)
-     ("qtx11extras" ,qtx11extras)))
+     ("qtx11extras" ,qtx11extras-5)))
   (synopsis "Clipboard manager with advanced features")
   (description "CopyQ is clipboard manager with editing and scripting
 features.  CopyQ monitors system clipboard and saves its content in customized

@@ -162,7 +162,7 @@ human.")
        ("qrencode" ,qrencode)
        ("qtbase" ,qtbase-5)
        ("qtsvg" ,qtsvg-5)
-       ("qtx11extras" ,qtx11extras)
+       ("qtx11extras" ,qtx11extras-5)
        ("quazip" ,quazip)               ; XC_KEESHARE
        ("readline" ,readline)
        ("yubikey-personalization" ,yubikey-personalization) ; XC_YUBIKEY
