@@ -108,7 +108,7 @@ hundred times faster than real-time.")
          ("enki" ,enki)
          ("protobuf" ,protobuf-3.5)               ;for logging
          ("qtbase" ,qtbase-5)
-         ("qtsvg" ,qtsvg)
+         ("qtsvg" ,qtsvg-5)
          ("qttools" ,qttools)              ;for libQt5Help, needed by "studio"
          ("qtwebkit" ,qtwebkit)
          ("qtx11extras" ,qtx11extras)

@@ -595,7 +595,7 @@ other machines/servers.  Electrum does not download the Bitcoin blockchain.")
        ("python-requests" ,python-requests)
        ("python-stem" ,python-stem)
        ("python-trezor" ,python-trezor)
-       ("qtsvg" ,qtsvg)
+       ("qtsvg" ,qtsvg-5)
        ("zlib" ,zlib)))
     (arguments
      `(#:tests? #f                      ; no tests
@@ -778,7 +778,7 @@ the Monero command line client and daemon.")
        ("qtgraphicaleffects" ,qtgraphicaleffects)
        ("qtquickcontrols" ,qtquickcontrols)
        ("qtquickcontrols2",qtquickcontrols2)
-       ("qtsvg" ,qtsvg)
+       ("qtsvg" ,qtsvg-5)
        ("qtxmlpatterns" ,qtxmlpatterns)))
     (arguments
      `(#:tests? #f ; No tests

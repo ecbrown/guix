@@ -462,7 +462,7 @@ support.")
     (inputs
      `(("qtbase" ,qtbase-5)
        ("qtdeclarative" ,qtdeclarative)
-       ("qtsvg" ,qtsvg)
+       ("qtsvg" ,qtsvg-5)
        ("zlib" ,zlib)))
     (native-inputs
      `(("qttools" ,qttools)))

@@ -319,7 +319,7 @@ with X11 or Wayland, or in a text terminal with ncurses.")
   (inputs
    `(("qtbase" ,qtbase-5)
      ("qtscript" ,qtscript)
-     ("qtsvg" ,qtsvg)
+     ("qtsvg" ,qtsvg-5)
      ("qtx11extras" ,qtx11extras)))
   (synopsis "Clipboard manager with advanced features")
   (description "CopyQ is clipboard manager with editing and scripting

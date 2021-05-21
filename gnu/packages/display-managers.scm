@@ -89,7 +89,7 @@
        ("qtgraphicaleffects" ,qtgraphicaleffects)
        ("qtquickcontrols" ,qtquickcontrols)
        ("qtquickcontrols2" ,qtquickcontrols2)
-       ("qtsvg" ,qtsvg)
+       ("qtsvg" ,qtsvg-5)
 
        ("shadow" ,shadow)
        ("wayland" ,wayland)))

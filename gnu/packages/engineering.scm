@@ -202,7 +202,7 @@
        ("muparser" ,muparser)
        ("freetype" ,freetype)
        ("qtbase" ,qtbase-5)
-       ("qtsvg" ,qtsvg)))
+       ("qtsvg" ,qtsvg-5)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
        ("which" ,which)))
@@ -703,7 +703,7 @@ multipole-accelerated algorithm.")
     (inputs
      `(("qtbase" ,qtbase-5)
        ("qtserialport" ,qtserialport)
-       ("qtsvg" ,qtsvg)
+       ("qtsvg" ,qtsvg-5)
        ("libgit2" ,libgit2)
        ("boost" ,boost)
        ("zlib" ,zlib)
@@ -2048,7 +2048,7 @@ parallel computing platforms.  It also supports serial execution.")
     (build-system gnu-build-system)
     (inputs
      `(("qtbase" ,qtbase-5)
-       ("qtsvg" ,qtsvg)
+       ("qtsvg" ,qtsvg-5)
        ("zlib" ,zlib)))
     (native-inputs
      `(("qttools" ,qttools)             ; for lrelease
@@ -2210,7 +2210,7 @@ simulation.")
      `(("pkg-config" ,pkg-config)))
     (inputs
      `(("qtbase" ,qtbase-5)
-       ("qtsvg" ,qtsvg)
+       ("qtsvg" ,qtsvg-5)
        ("openssl" ,openssl)
        ;; Depends on radare2 4.5.1 officially, builds and works fine with
        ;; radare2 5.0.0 but fails to build with radare2 5.1.1.
@@ -2421,7 +2421,7 @@ comments.")))
        ("python-shiboken-2" ,python-shiboken-2)
        ("python-wrapper" ,python-wrapper)
        ("qtbase" ,qtbase-5)
-       ("qtsvg" ,qtsvg)
+       ("qtsvg" ,qtsvg-5)
        ("qtwebkit" ,qtwebkit)
        ("qtx11extras" ,qtx11extras)
        ("qtxmlpatterns" ,qtxmlpatterns)

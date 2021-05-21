@@ -6607,7 +6607,7 @@ and Karl Berry.")
        ("mythes" ,mythes)
        ("python" ,python)
        ("qtbase" ,qtbase-5)
-       ("qtsvg" ,qtsvg)
+       ("qtsvg" ,qtsvg-5)
        ("zlib" ,zlib)))
     (propagated-inputs
      `(("texlive" ,(texlive-union (list texlive-fonts-ec)))))

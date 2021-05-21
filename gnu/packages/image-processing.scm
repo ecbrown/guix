@@ -1158,7 +1158,7 @@ substituted by matching images.")
          ("libpng" ,libpng)
          ("libtiff" ,libtiff)
          ("qtbase" ,qtbase-5)
-         ("qtsvg" ,qtsvg)
+         ("qtsvg" ,qtsvg-5)
          ("zlib" ,zlib)))
       (arguments
        `(#:phases

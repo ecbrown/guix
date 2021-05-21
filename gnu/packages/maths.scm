@@ -2326,7 +2326,7 @@ ASCII text files using Gmsh's own scripting language.")
        ("python-h5py" ,python-h5py) ;optional, for HDF5 data
        ("python-pyqt" ,python-pyqt)
        ("qtbase" ,qtbase-5)
-       ("qtsvg" ,qtsvg)))
+       ("qtsvg" ,qtsvg-5)))
     (propagated-inputs
      `(("python-numpy" ,python-numpy)))
     (home-page "https://veusz.github.io/")

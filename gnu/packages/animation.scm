@@ -407,7 +407,7 @@ waveform until they line up with the proper sounds.")
      `(("qtbase" ,qtbase-5)
        ("qtxmlpatterns" ,qtxmlpatterns)
        ("qtmultimedia" ,qtmultimedia)
-       ("qtsvg" ,qtsvg)))
+       ("qtsvg" ,qtsvg-5)))
     (arguments
      `(#:phases
        (modify-phases %standard-phases

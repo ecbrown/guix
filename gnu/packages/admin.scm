@@ -1867,7 +1867,7 @@ command.")
     (inherit wpa-supplicant)
     (name "wpa-supplicant-gui")
     (inputs `(("qtbase" ,qtbase-5)
-              ("qtsvg" ,qtsvg)
+              ("qtsvg" ,qtsvg-5)
               ,@(package-inputs wpa-supplicant)))
     (native-inputs
      ;; For icons.

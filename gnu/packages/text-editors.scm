@@ -621,7 +621,7 @@ scripts/input/X11/C/Shell/HTML/Dired): 49KB.
        ("qtdeclarative" ,qtdeclarative)
        ("qtmultimedia" ,qtmultimedia)
        ("qtquickcontrols" ,qtquickcontrols)
-       ("qtsvg" ,qtsvg)
+       ("qtsvg" ,qtsvg-5)
        ("qtwebchannel" ,qtwebchannel)))
     (propagated-inputs                  ; To get native-search-path
      `(("qtwebengine" ,qtwebengine)))
@@ -724,7 +724,7 @@ environment with Markdown markup.")
        ("python-lxml" ,python-lxml)
        ("python-markdown" ,python-markdown)
        ("python-pyqt" ,python-pyqt)
-       ("qtsvg" ,qtsvg)))
+       ("qtsvg" ,qtsvg-5)))
     (home-page "http://www.theologeek.ch/manuskript/")
     (synopsis "Tool for writers")
     (description "Manuskript provides a rich environment to help
@@ -824,7 +824,7 @@ editors.")
        ("perl" ,perl)
        ("python" ,python-wrapper)
        ("qt" ,qtbase-5)
-       ("qtsvg" ,qtsvg)))
+       ("qtsvg" ,qtsvg-5)))
     (arguments
      `(#:tests? #f                      ; no check target
        #:phases

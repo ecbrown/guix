@@ -644,7 +644,7 @@ address of one of the participants.")
        ("protobuf" ,protobuf)
        ("pulseaudio" ,pulseaudio)
        ("qtbase" ,qtbase-5)
-       ("qtsvg" ,qtsvg)
+       ("qtsvg" ,qtsvg-5)
        ("speech-dispatcher" ,speech-dispatcher)
        ("speex" ,speex) ; avoid bundled
        ("speexdsp" ,speexdsp))) ; avoid bundled

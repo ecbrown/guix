@@ -1825,7 +1825,7 @@ parsing, viewing, modifying, and saving this metadata.")
      `(("qttools" ,qttools)))
     (inputs
      `(("qtbase" ,qtbase-5)
-       ("qtsvg" ,qtsvg)))
+       ("qtsvg" ,qtsvg-5)))
     (arguments
      `(#:tests? #f))                    ;no tests
     (home-page "https://github.com/flameshot-org/flameshot")

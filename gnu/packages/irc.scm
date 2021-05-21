@@ -133,7 +133,7 @@
        ("qtbase" ,qtbase-5)
        ("qtmultimedia" ,qtmultimedia)
        ("qtscript" ,qtscript)
-       ("qtsvg" ,qtsvg)
+       ("qtsvg" ,qtsvg-5)
        ("snorenotify" ,snorenotify)
        ("zlib" ,zlib)))
     (home-page "https://quassel-irc.org/")

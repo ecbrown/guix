@@ -12387,7 +12387,7 @@ Thus the per-base error rate is similar to the raw input reads.")
                #t))))))
     (inputs
      `(("qtbase" ,qtbase-5)
-       ("qtsvg" ,qtsvg)))
+       ("qtsvg" ,qtsvg-5)))
     (native-inputs
      `(("imagemagick" ,imagemagick)))
     (home-page "https://rrwick.github.io/Bandage/")

@@ -2718,7 +2718,7 @@ browser.")
              #t)))))
     (inputs
      `(("qtbase" ,qtbase-5)
-       ("qtsvg" ,qtsvg)
+       ("qtsvg" ,qtsvg-5)
        ("qttools" ,qttools)
        ("alsa-lib" ,alsa-lib)))
     (native-inputs
@@ -2766,7 +2766,7 @@ backends, including ALSA, OSS, Network and FluidSynth.")
     (inputs
      `(("drumstick" ,drumstick)
        ("qtbase" ,qtbase-5)
-       ("qtsvg" ,qtsvg)
+       ("qtsvg" ,qtsvg-5)
        ("qtx11extras" ,qtx11extras)))
     (native-inputs
      `(("libxslt" ,libxslt) ;for xsltproc
@@ -4746,7 +4746,7 @@ standalone JACK client and an LV2 plugin is also available.")
        ("qtdeclarative" ,qtdeclarative)
        ("qtquickcontrols2" ,qtquickcontrols2)
        ("qtscript" ,qtscript)
-       ("qtsvg" ,qtsvg)
+       ("qtsvg" ,qtsvg-5)
        ("qtxmlpatterns" ,qtxmlpatterns)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
@@ -4823,7 +4823,7 @@ sample library.")
        ("pcre" ,pcre)
        ("pulseaudio" ,pulseaudio) ; required by rtaudio
        ("qtbase" ,qtbase-5)
-       ("qtsvg" ,qtsvg)
+       ("qtsvg" ,qtsvg-5)
        ("rtaudio" ,rtaudio)
        ("rubberband" ,rubberband)))
     (native-inputs
@@ -5503,7 +5503,7 @@ discard bad quality ones.
        ("portaudio" ,portaudio)
        ("qtbase" ,qtbase-5)
        ("qtmultimedia" ,qtmultimedia)
-       ("qtsvg" ,qtsvg)))
+       ("qtsvg" ,qtsvg-5)))
     (native-inputs
      `(("gettext" ,gettext-minimal)
        ("hicolor-icon-theme" ,hicolor-icon-theme)

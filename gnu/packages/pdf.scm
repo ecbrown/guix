@@ -848,7 +848,7 @@ program capable of converting PDF into other formats.")
        ("libspectre" ,libspectre)
        ("poppler-qt5" ,poppler-qt5)
        ("qtbase" ,qtbase-5)
-       ("qtsvg" ,qtsvg)))
+       ("qtsvg" ,qtsvg-5)))
     (arguments
      `(#:imported-modules ((guix build qt-build-system)
                            (guix build cmake-build-system)

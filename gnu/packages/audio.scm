@@ -2882,7 +2882,7 @@ link REQUIRED)"))
        ("yaml-cpp" ,yaml-cpp)
        ("qtbase" ,qtbase-5)
        ("qtdeclarative" ,qtdeclarative)
-       ("qtsvg" ,qtsvg)
+       ("qtsvg" ,qtsvg-5)
        ("qtwebchannel" ,qtwebchannel)
        ("qtwebsockets" ,qtwebsockets)))
     (propagated-inputs                  ;to get native-search-path

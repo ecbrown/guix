@@ -650,7 +650,7 @@ to the fix block above.
        ("portaudio" ,portaudio)
        ("pulseaudio" ,pulseaudio)
        ("qtbase" ,qtbase-5)
-       ("qtsvg" ,qtsvg)
+       ("qtsvg" ,qtsvg-5)
        ("volk" ,volk)))
     (arguments
      `(#:tests? #f))                    ; no tests
@@ -1493,7 +1493,7 @@ Compatible hardware/software:
        ("opus" ,opus)
        ("pulseaudio" ,pulseaudio)
        ("qtbase" ,qtbase-5)
-       ("qtsvg" ,qtsvg)
+       ("qtsvg" ,qtsvg-5)
        ("qtwebkit" ,qtwebkit)
        ("qwt" ,qwt)
        ("speexdsp" ,speexdsp)

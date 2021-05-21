@@ -196,7 +196,7 @@ of categories with some of the activities available in that category.
        ("qtmultimedia" ,qtmultimedia)
        ("qtquickcontrols" ,qtquickcontrols)
        ("qtsensors" ,qtsensors)
-       ("qtsvg" ,qtsvg)
+       ("qtsvg" ,qtsvg-5)
        ("qtxmlpatterns" ,qtxmlpatterns)))
     (home-page "https://gcompris.net/index-en.html")
     (synopsis "Educational games for small children")

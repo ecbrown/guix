@@ -198,7 +198,7 @@
        ("qtkeychain" ,qtkeychain)
        ("qtquickcontrols2" ,qtquickcontrols2)
        ("qtsolutions" ,qtsolutions)
-       ("qtsvg" ,qtsvg)
+       ("qtsvg" ,qtsvg-5)
        ("qtwebchannel" ,qtwebchannel)
        ("qtwebsockets" ,qtwebsockets)
        ("qtwebkit" ,qtwebkit)
