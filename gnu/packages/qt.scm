@@ -800,12 +800,51 @@ HostData=lib/qt5
  contents of SVG files.")))
 
 (define-public qtimageformats
-  (package (inherit qtsvg-5)
+  (package (inherit qtsvg)
     (name "qtimageformats")
+    (version "6.1.0")
+    (source (origin
+             (method url-fetch)
+             (uri (qt5-urls "qtimageformats" version))
+             (sha256
+              (base32
+               "0njp526ixn7xzbqc5a289qj57yrf00qpvcx42g65s30xsf33gril"))
+             (modules '((guix build utils)))
+             (snippet
+              '(begin
+                 (delete-file-recursively "src/3rdparty")
+                 #t))))
+    (build-system cmake-build-system)
+    (arguments
+     (substitute-keyword-arguments (package-arguments qtsvg)
+       ((#:phases phases)
+        `(modify-phases ,phases
+           (add-after 'unpack 'fix-build
+             (lambda _
+               (substitute* "src/plugins/imageformats/jp2/qjp2handler.cpp"
+                 (("^#include <jasper/jasper.h>")
+                  "#include <jasper/jasper.h>\n#include <QtCore/qmath.h>"))
+               #t))))))
+    (native-inputs `())
+    (inputs
+     `(("jasper" ,jasper)
+       ("libmng" ,libmng)
+       ("libtiff" ,libtiff)
+       ("libwebp" ,libwebp)
+       ("mesa" ,mesa)
+       ("qtbase" ,qtbase)
+       ("zlib" ,zlib)))
+    (synopsis "Additional Image Format plugins for Qt")
+    (description "The QtImageFormats module contains plugins for adding
+support for MNG, TGA, TIFF and WBMP image formats.")))
+
+(define-public qtimageformats-5
+  (package (inherit qtsvg-5)
+    (name "qtimageformats-5")
     (version "5.15.2")
     (source (origin
              (method url-fetch)
-             (uri (qt5-urls name version))
+             (uri (qt5-urls "qtimageformats" version))
              (sha256
               (base32
                "1msk8a0z8rr16hkp2fnv668vf6wayiydqgc2mcklaa04rv3qb0mz"))
