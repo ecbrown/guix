@@ -1075,7 +1075,7 @@ integration with a custom editor as well as a ready-to-use
        ("pkg-config" ,pkg-config)))
     (inputs
      `(("qtbase" ,qtbase-5)
-       ("qtwayland" ,qtwayland)
+       ("qtwayland" ,qtwayland-5)
        ("wayland" ,wayland)
        ("wayland-protocols" ,wayland-protocols)))
     (arguments

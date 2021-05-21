@@ -541,7 +541,7 @@ Telegram project, for its use in telegram desktop client.")
        ("qt" ,qtbase-5)
        ("qt5ct" ,qt5ct)
        ("qtimageformats" ,qtimageformats-5)
-       ("qtwayland" ,qtwayland)
+       ("qtwayland" ,qtwayland-5)
        ("range-v3" ,range-v3)
        ("rlottie" ,rlottie-for-telegram-desktop)
        ("tgcalls-source"
