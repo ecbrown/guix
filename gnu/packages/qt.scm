@@ -263,7 +263,7 @@ applications on Wayland.")
      `(("doxygen" ,doxygen)))
     (inputs
      `(("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)
+       ("qtdeclarative" ,qtdeclarative-5)
        ("qtscript" ,qtscript)))
     (build-system cmake-build-system)
     (arguments
@@ -897,13 +897,13 @@ support for MNG, TGA, TIFF and WBMP image formats.")))
     (description "The QtX11Extras module includes the library to access X11
 from within Qt 5.")))
 
-(define-public qtxmlpatterns
+(define-public qtxmlpatterns-5
   (package (inherit qtsvg-5)
-    (name "qtxmlpatterns")
+    (name "qtxmlpatterns-5")
     (version "5.15.2")
     (source (origin
              (method url-fetch)
-             (uri (qt5-urls name version))
+             (uri (qt5-urls "qtxmlpatterns" version))
              (sha256
               (base32
                "1ypj5jpa31rlx8yfw3y9jia212lfnxvnqkvygs6ihjf3lxi23skn"))))
@@ -918,7 +918,7 @@ from within Qt 5.")))
                          (("xmlpatterns ") "# xmlpatterns"))
                #t))))))
     (native-inputs `(("perl" ,perl)
-                     ("qtdeclarative" ,qtdeclarative)))
+                     ("qtdeclarative" ,qtdeclarative-5)))
     (inputs `(("qtbase" ,qtbase-5)))
     (synopsis "Qt XML patterns module")
     (description "The QtXmlPatterns module is a XQuery and XPath engine for
@@ -926,12 +926,55 @@ XML and custom data models.  It contains programs such as xmlpatterns and
 xmlpatternsvalidator.")))
 
 (define-public qtdeclarative
-  (package (inherit qtsvg-5)
+  (package (inherit qtsvg)
     (name "qtdeclarative")
-    (version "5.15.2")
+    (version "6.1.0")
     (source (origin
              (method url-fetch)
              (uri (qt5-urls name version))
+             (sha256
+              (base32
+               "1njvnx1z7nxq219asfbz7dyb25skg577p0jj3xa7nkfmp0a47xp6"))))
+    (arguments
+     (substitute-keyword-arguments (package-arguments qtsvg)
+       ((#:tests? _ #f) #f)             ;TODO: Enable the tests
+;;       ((#:phases phases)
+;;        `(modify-phases ,phases
+;;           (add-after 'build 'fix-qt5core-install-prefix
+;;             (lambda* (#:key outputs #:allow-other-keys)
+;;               (let ((out (assoc-ref outputs "out")))
+;;                 ;; The Qt5Core install prefix is set to qtbase, but qmlcachegen
+;;                 ;; is provided by qtdeclarative.
+;;                 (substitute*
+;;                     "lib/cmake/Qt5QuickCompiler/Qt5QuickCompilerConfig.cmake"
+;;                   (("\\$\\{_qt5Core_install_prefix\\}") out)))
+;;               #t))))
+       ))
+    (native-inputs
+     `(("libxkbcommon" ,libxkbcommon)
+       ("perl" ,perl)
+       ("pkg-config" ,pkg-config)
+       ("python" ,python)
+       ("python-wrapper" ,python-wrapper)
+       ("qtsvg" ,qtsvg)
+       ("vulkan-headers" ,vulkan-headers)))
+    (inputs
+     `(("mesa" ,mesa)
+       ("qtbase" ,qtbase)))
+    (synopsis "Qt QML module (Quick 2)")
+    (description "The Qt QML module provides a framework for developing
+applications and libraries with the QML language.  It defines and implements the
+language and engine infrastructure, and provides an API to enable application
+developers to extend the QML language with custom types and integrate QML code
+with JavaScript and C++.")))
+
+(define-public qtdeclarative-5
+  (package (inherit qtsvg-5)
+    (name "qtdeclarative-5")
+    (version "5.15.2")
+    (source (origin
+             (method url-fetch)
+             (uri (qt5-urls "qtdeclarative" version))
              (sha256
               (base32
                "0lancdn7y0lrlmyn5cbdm0izd5yprvd5n77nhkb7a3wl2sbx0066"))))
@@ -979,7 +1022,7 @@ with JavaScript and C++.")))
     (native-inputs
      `(("perl" ,perl)
        ("pkg-config" ,pkg-config)
-       ("qtdeclarative" ,qtdeclarative)))
+       ("qtdeclarative" ,qtdeclarative-5)))
     (inputs
      `(("bluez" ,bluez)
        ("qtbase" ,qtbase-5)))
@@ -1002,7 +1045,7 @@ with Bluetooth and NFC.")))
        ((#:tests? _ #f) #f))) ; TODO: Enable the tests
     (native-inputs
      `(("perl" ,perl)
-       ("qtdeclarative" ,qtdeclarative)))
+       ("qtdeclarative" ,qtdeclarative-5)))
     (inputs `(("qtbase" ,qtbase-5)))
     (synopsis "Qt Web Sockets module")
     (description "WebSocket is a web-based protocol designed to enable two-way
@@ -1034,7 +1077,7 @@ consume data received from the server, or both.")))
                #t))))))
     (native-inputs
      `(("perl" ,perl)
-       ("qtdeclarative" ,qtdeclarative)))
+       ("qtdeclarative" ,qtdeclarative-5)))
     (inputs `(("qtbase" ,qtbase-5)))
     (synopsis "Qt Sensors module")
     (description "The Qt Sensors API provides access to sensor hardware via QML
@@ -1075,7 +1118,7 @@ recognition API for devices.")))
      `(("perl" ,perl)
        ("pkg-config" ,pkg-config)
        ("python" ,python)
-       ("qtdeclarative" ,qtdeclarative)))
+       ("qtdeclarative" ,qtdeclarative-5)))
     (inputs
      `(("alsa-lib" ,alsa-lib)
        ("mesa" ,mesa)
@@ -1123,7 +1166,7 @@ set of plugins for interacting with pulseaudio and GStreamer.")))
      `(("glib" ,glib)
        ("perl" ,perl)
        ("pkg-config" ,pkg-config)
-       ("qtdeclarative" ,qtdeclarative)))
+       ("qtdeclarative" ,qtdeclarative-5)))
     (inputs
      `(("fontconfig" ,fontconfig)
        ("freetype" ,freetype)
@@ -1216,7 +1259,7 @@ and others.")))
                "1h9y634phvvk557mhmf9z4lmxr41rl8x9mqy2lzp31mk8ffffzqj"))))
     (native-inputs
      `(("perl" ,perl)
-       ("qtdeclarative" ,qtdeclarative)
+       ("qtdeclarative" ,qtdeclarative-5)
        ("qtwebsockets" ,qtwebsockets)))
     (inputs `(("qtbase" ,qtbase-5)))
     (synopsis "Web communication library for Qt")
@@ -1247,7 +1290,7 @@ popular web engines, Qt WebKit 2 and Qt WebEngine.")))
     (inputs
      `(("mesa" ,mesa)
        ("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)
+       ("qtdeclarative" ,qtdeclarative-5)
        ("qtwebsockets" ,qtwebsockets)
        ("zlib" ,zlib)))
     (synopsis "QPA plugin for running an application via a browser using
@@ -1272,7 +1315,7 @@ OpenGL ES 2.0 and can be used in HTML5 canvas elements")))
      `(("perl" ,perl)))
     (inputs
      `(("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)))
+       ("qtdeclarative" ,qtdeclarative-5)))
     (synopsis "Display web content in a QML application")
     (description "Qt WebView provides a way to display web content in a QML
 application without necessarily including a full web browser stack by using
@@ -1296,7 +1339,7 @@ native APIs where it makes sense.")))
        ((#:tests? _ #f) #f))) ; TODO: Enable the tests
     (native-inputs
      `(("perl" ,perl)
-       ("qtdeclarative" ,qtdeclarative)
+       ("qtdeclarative" ,qtdeclarative-5)
        ("qtquickcontrols" ,qtquickcontrols)
        ("qtserialport" ,qtserialport)))
     (inputs
@@ -1323,7 +1366,7 @@ positioning and geolocation plugins.")))
        ((#:tests? _ #f) #f))) ; TODO: Enable the tests
     (native-inputs
      `(("perl" ,perl)
-       ("qtdeclarative" ,qtdeclarative)
+       ("qtdeclarative" ,qtdeclarative-5)
        ("vulkan-headers" ,vulkan-headers)))
     (inputs
      `(("mesa" ,mesa)
@@ -1369,7 +1412,7 @@ ECMAScript and Qt.")))
        ((#:tests? _ #f) #f))) ; TODO: Enable the tests
     (inputs
      `(("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)))
+       ("qtdeclarative" ,qtdeclarative-5)))
     (synopsis "Qt Quick Controls and other Quick modules")
     (description "The QtScript module provides classes for making Qt
 applications scriptable.  This module provides a set of extra components that
@@ -1390,7 +1433,7 @@ can be used to build complete interfaces in Qt Quick.")))
        ((#:tests? _ #f) #f))) ; TODO: Enable the tests
     (inputs
      `(("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)))
+       ("qtdeclarative" ,qtdeclarative-5)))
     (synopsis "Qt Quick Controls 2 and other Quick 2 modules")
     (description "The Qt Quick Controls 2 module contains the Qt Labs Platform
 module that provides platform integration: native dialogs, menus and menu bars,
@@ -1412,7 +1455,7 @@ not available.")))
        ((#:tests? _ #f) #f))) ; TODO: Enable the tests
     (inputs
      `(("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)))
+       ("qtdeclarative" ,qtdeclarative-5)))
     (synopsis "Qt Graphical Effects module")
     (description "The Qt Graphical Effects module provides a set of QML types
 for adding visually impressive and configurable effects to user interfaces.
@@ -1440,7 +1483,7 @@ coloring, and many more.")))
        ("libxrender" ,libxrender)
        ("sdl2" ,sdl2)
        ("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)))
+       ("qtdeclarative" ,qtdeclarative-5)))
     (synopsis "Qt Gamepad module")
     (description "The Qt Gamepad module is an add-on library that enables Qt
 applications to support the use of gamepad hardware and in some cases remote
@@ -1468,7 +1511,7 @@ and mobile applications targeting TV-like form factors.")))
                  #t))))
     (inputs
      `(("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)))
+       ("qtdeclarative" ,qtdeclarative-5)))
     (synopsis "Qt SCXML module")
     (description "The Qt SCXML module provides functionality to create state
 machines from SCXML files.  This includes both dynamically creating state
@@ -1488,7 +1531,7 @@ also contains functionality to support data models and executable content.")))
                "09rjx53519dfk4qj2gbn3vlxyriasyb747wpg1p11y7jkwqhs4l7"))))
     (inputs
      `(("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)))
+       ("qtdeclarative" ,qtdeclarative-5)))
     (synopsis "Qt Purchasing module")
     (description "The Qt Purchasing module provides and in-app API for
 purchasing goods and services.")))
@@ -1508,7 +1551,7 @@ purchasing goods and services.")))
        ((#:tests? _ #f) #f))) ; TODO: Enable the tests
     (inputs
      `(("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)))
+       ("qtdeclarative" ,qtdeclarative-5)))
     (synopsis "Qt Charts module")
     (description "The Qt Charts module provides a set of easy to use chart
 components.  It uses the Qt Graphics View Framework, therefore charts can be
@@ -1532,7 +1575,7 @@ selecting one of the charts themes.")
        ((#:tests? _ #f) #f))) ; TODO: Enable the tests
     (inputs
      `(("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)))
+       ("qtdeclarative" ,qtdeclarative-5)))
     (synopsis "Qt Data Visualization module")
     (description "The Qt Data Visualization module provides a way to visualize
 data in 3D as bar, scatter, and surface graphs. It is especially useful for
@@ -1594,7 +1637,7 @@ implementation of OAuth and OAuth2 authenticathon methods for Qt.")))
                #t))))))
     (inputs
      `(("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)))
+       ("qtdeclarative" ,qtdeclarative-5)))
     (synopsis "Qt Remote Objects module")
     (description "The Qt Remote Objects module is an @dfn{inter-process
 communication} (IPC) module developed for Qt.  The idea is to extend existing
@@ -1619,9 +1662,9 @@ processes or computers.")))
      `(("qtbase" ,qtbase-5)))
     (native-inputs
      `(("perl" ,perl)
-       ("qtdeclarative" ,qtdeclarative)
+       ("qtdeclarative" ,qtdeclarative-5)
        ("qtmultimedia" ,qtmultimedia)
-       ("qtxmlpatterns" ,qtxmlpatterns)))
+       ("qtxmlpatterns" ,qtxmlpatterns-5)))
     (synopsis "Qt Speech module")
     (description "The Qt Speech module enables a Qt application to support
 accessibility features such as text-to-speech, which is useful for end-users
@@ -1946,7 +1989,7 @@ using the Enchant spell-checking library.")
        ("protobuf" ,protobuf)
        ("pulseaudio" ,pulseaudio)
        ("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)
+       ("qtdeclarative" ,qtdeclarative-5)
        ("qtmultimedia" ,qtmultimedia)
        ("qtwebchannel" ,qtwebchannel)
        ("re2" ,re2)
@@ -2123,7 +2166,7 @@ module provides support functions to the automatically generated code.")
      `(("python" ,python-wrapper)
        ("qtbase" ,qtbase-5)
        ("qtconnectivity" ,qtconnectivity)
-       ("qtdeclarative" ,qtdeclarative)
+       ("qtdeclarative" ,qtdeclarative-5)
        ("qtlocation" ,qtlocation)
        ("qtmultimedia" ,qtmultimedia)
        ("qtsensors" ,qtsensors)
@@ -2134,7 +2177,7 @@ module provides support functions to the automatically generated code.")
        ("qtwebkit" ,qtwebkit)
        ("qtwebsockets" ,qtwebsockets)
        ("qtx11extras" ,qtx11extras-5)
-       ("qtxmlpatterns" ,qtxmlpatterns)))
+       ("qtxmlpatterns" ,qtxmlpatterns-5)))
     (arguments
      `(#:modules ((srfi srfi-1)
                   ((guix build python-build-system) #:select (python-version))
@@ -2234,7 +2277,7 @@ contain over 620 classes.")
        ("python-pyqt" ,python-pyqt)
        ("qtbase" ,qtbase-5)
        ("qtsvg" ,qtsvg-5)
-       ("qtdeclarative" ,qtdeclarative)
+       ("qtdeclarative" ,qtdeclarative-5)
        ("qtwebchannel" ,qtwebchannel)
        ("qtwebengine" ,qtwebengine)))
     (arguments
@@ -2704,7 +2747,7 @@ different kinds of sliders, and much more.")
        ("fontconfig" ,fontconfig)
        ("libxrender" ,libxrender)
        ("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)
+       ("qtdeclarative" ,qtdeclarative-5)
        ("qtlocation" ,qtlocation)
        ("qtmultimedia" ,qtmultimedia)
        ("qtsensors" ,qtsensors)
@@ -2769,7 +2812,7 @@ time Web content can be enhanced with native controls.")
      `(("qttools" ,qttools)))
     (inputs
      `(("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)))
+       ("qtdeclarative" ,qtdeclarative-5)))
     (home-page "https://filcuc.github.io/DOtherSide/index.html")
     (synopsis "C language library for creating bindings for the Qt QML language")
     (description
@@ -2885,7 +2928,7 @@ color-related widgets.")
        ("libxslt" ,libxslt)
        ("python-wrapper" ,python-wrapper)
        ("qtbase" ,qtbase-5)
-       ("qtxmlpatterns" ,qtxmlpatterns)))
+       ("qtxmlpatterns" ,qtxmlpatterns-5)))
     (arguments
      `(#:tests? #f
        ;; FIXME: Building tests fails
@@ -2947,7 +2990,7 @@ color-related widgets.")
        ("qtwebchannel" ,qtwebchannel)
        ("qtwebsockets" ,qtwebsockets)
        ("qtx11extras" ,qtx11extras-5)
-       ("qtxmlpatterns" ,qtxmlpatterns)))
+       ("qtxmlpatterns" ,qtxmlpatterns-5)))
     (propagated-inputs
      `(("python-shiboken-2" ,python-shiboken-2)))
     (native-inputs

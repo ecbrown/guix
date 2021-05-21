@@ -774,12 +774,12 @@ the Monero command line client and daemon.")
        ("libgcrypt" ,libgcrypt)
        ("monero" ,monero)
        ("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)
+       ("qtdeclarative" ,qtdeclarative-5)
        ("qtgraphicaleffects" ,qtgraphicaleffects)
        ("qtquickcontrols" ,qtquickcontrols)
        ("qtquickcontrols2",qtquickcontrols2)
        ("qtsvg" ,qtsvg-5)
-       ("qtxmlpatterns" ,qtxmlpatterns)))
+       ("qtxmlpatterns" ,qtxmlpatterns-5)))
     (arguments
      `(#:tests? #f ; No tests
        #:configure-flags

@@ -618,7 +618,7 @@ scripts/input/X11/C/Shell/HTML/Dired): 49KB.
     (inputs
      `(("hunspell" ,hunspell)
        ("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)
+       ("qtdeclarative" ,qtdeclarative-5)
        ("qtmultimedia" ,qtmultimedia)
        ("qtquickcontrols" ,qtquickcontrols)
        ("qtsvg" ,qtsvg-5)

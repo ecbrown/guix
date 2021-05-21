@@ -193,7 +193,7 @@
        ("openssl" ,openssl)
        ("python-nautilus" ,python-nautilus)
        ("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)
+       ("qtdeclarative" ,qtdeclarative-5)
        ("qtgraphicaleffects" ,qtgraphicaleffects)
        ("qtkeychain" ,qtkeychain)
        ("qtquickcontrols2" ,qtquickcontrols2)

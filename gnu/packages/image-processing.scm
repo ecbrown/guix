@@ -1031,7 +1031,7 @@ combine the information contained in both.")
        ("itk" ,insight-toolkit-4.12)
        ("vtk" ,vtk-6)
        ("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)
+       ("qtdeclarative" ,qtdeclarative-5)
        ("vxl" ,vxl-1)
        ("zlib" ,zlib)))
     (native-inputs

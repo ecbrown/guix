@@ -359,7 +359,7 @@ It supports JPEG, PNG and GIF formats.")
        ("qttools" ,qttools)))
     (inputs
      `(("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)
+       ("qtdeclarative" ,qtdeclarative-5)
        ("qtsvg" ,qtsvg-5)
        ("qtwebkit" ,qtwebkit)
        ("boost" ,boost)

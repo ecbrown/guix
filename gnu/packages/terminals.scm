@@ -646,7 +646,7 @@ embedded kernel situations.")
       (build-system gnu-build-system)
       (inputs
        `(("qtbase" ,qtbase-5)
-         ("qtdeclarative" ,qtdeclarative)
+         ("qtdeclarative" ,qtdeclarative-5)
          ("qtgraphicaleffects" ,qtgraphicaleffects)
          ("qtquickcontrols" ,qtquickcontrols)))
       (arguments

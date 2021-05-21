@@ -170,7 +170,7 @@ This package is part of the KDE multimedia module.")
        ("oxygen-icons" ,oxygen-icons) ; default icon set
        ("phonon" ,phonon)
        ("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)
+       ("qtdeclarative" ,qtdeclarative-5)
        ("qtgraphicaleffects" ,qtgraphicaleffects) ; not listed as dependency
        ("qtmultimedia" ,qtmultimedia)
        ("qtquickcontrols" ,qtquickcontrols)
@@ -469,7 +469,7 @@ autoloading of subtitle files for use while playing video.")
        ("oxygen-icons" ,oxygen-icons) ; default icon set
        ("purpose" ,purpose)
        ("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)
+       ("qtdeclarative" ,qtdeclarative-5)
        ("qtgraphicaleffects" ,qtgraphicaleffects)
        ("qtquickcontrols" ,qtquickcontrols)
        ("qtquickcontrols2" ,qtquickcontrols2) ; not listed as dependency

@@ -81,7 +81,7 @@
        ("libxkbcommon" ,libxkbcommon)
        ("linux-pam" ,linux-pam)
        ("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)
+       ("qtdeclarative" ,qtdeclarative-5)
 
        ;; Some user-defined themes use QtQuick components internally.  Adding
        ;; QtQuick & co. here; they end up in QML2_IMPORT_PATH thanks to

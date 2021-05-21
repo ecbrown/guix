@@ -2881,7 +2881,7 @@ link REQUIRED)"))
        ("boost-sync" ,boost-sync)
        ("yaml-cpp" ,yaml-cpp)
        ("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)
+       ("qtdeclarative" ,qtdeclarative-5)
        ("qtsvg" ,qtsvg-5)
        ("qtwebchannel" ,qtwebchannel)
        ("qtwebsockets" ,qtwebsockets)))
@@ -5094,7 +5094,7 @@ Rate} 3600x2250 bit/s vocoder used in various radio systems.")
        ("python" ,python)       ;for running tests
        ("portaudio" ,portaudio) ;for portaudio examples
        ("qtbase" ,qtbase-5)       ;for Qt examples
-       ("qtdeclarative" ,qtdeclarative)
+       ("qtdeclarative" ,qtdeclarative-5)
        ("qttools" ,qttools)))
     (inputs
      `(("jack" ,jack-1)                       ;for JACK examples

@@ -88,7 +88,7 @@
        ("poppler" ,poppler)
        ("python" ,python)               ; need Python library
        ("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)
+       ("qtdeclarative" ,qtdeclarative-5)
        ("zlib" ,zlib)))
     (native-inputs
      `(("pkg-config" ,pkg-config)

@@ -75,7 +75,7 @@
        ("kwayland" ,kwayland) ; optional
        ("kwindowsystem" ,kwindowsystem)
        ("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative) ; optional
+       ("qtdeclarative" ,qtdeclarative-5) ; optional
        ("qtx11extras" ,qtx11extras-5)))
     (home-page "https://invent.kde.org/plasma/breeze")
     (synopsis "Default KDE Plasma theme")
@@ -191,7 +191,7 @@ call it if it is not associated to a terminal.")
        ("linux-pam" ,linux-pam)
        ("logind" ,elogind)        ;optional loginctl support
        ("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)
+       ("qtdeclarative" ,qtdeclarative-5)
        ("qtx11extras" ,qtx11extras-5)
        ("solid" ,solid)
        ("wayland" ,wayland)
@@ -262,7 +262,7 @@ basic needs and easy to configure for those who want special setups.")
        ("kwidgetsaddons" ,kwidgetsaddons)
        ("kservice" ,kservice)
        ("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)
+       ("qtdeclarative" ,qtdeclarative-5)
        ("qtscript" ,qtscript)
        ("qtwebkit" ,qtwebkit)
        ("qtx11extras" ,qtx11extras-5)

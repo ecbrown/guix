@@ -405,7 +405,7 @@ waveform until they line up with the proper sounds.")
     (build-system gnu-build-system)
     (inputs
      `(("qtbase" ,qtbase-5)
-       ("qtxmlpatterns" ,qtxmlpatterns)
+       ("qtxmlpatterns" ,qtxmlpatterns-5)
        ("qtmultimedia" ,qtmultimedia)
        ("qtsvg" ,qtsvg-5)))
     (arguments

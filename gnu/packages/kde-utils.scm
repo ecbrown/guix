@@ -469,7 +469,7 @@ remind you to take a break now and then.")
        ("oxygen-icons" ,oxygen-icons) ;; default icon set
        ("plasma-framework" ,plasma-framework)
        ("qtbase" ,qtbase-5)
-       ("qtdeclarative" ,qtdeclarative)
+       ("qtdeclarative" ,qtdeclarative-5)
        ("solid" ,solid)))
     (home-page "https://kde.org/applications/utilities/org.kde.smb4k")
     (synopsis "Samba (SMB) share advanced browser")
