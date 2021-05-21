@@ -613,7 +613,7 @@ and enhance them.")
                        "Photoflare.pro")))))))
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("graphicsmagick" ,graphicsmagick)
        ("libomp" ,libomp)

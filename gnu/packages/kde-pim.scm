@@ -58,7 +58,7 @@
     (build-system qt-build-system)
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("shared-mime-info" ,shared-mime-info)))
     (inputs
      `(("boost" ,boost)
@@ -544,7 +544,7 @@ one of the APIs mentioned above.")
     (build-system qt-build-system)
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("akonadi" ,akonadi)
        ("akonadi-calendar" ,akonadi-calendar)
@@ -787,7 +787,7 @@ package.")
     (build-system qt-build-system)
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("akonadi" ,akonadi)
        ("akonadi-calendar" ,akonadi-calendar)
@@ -1137,7 +1137,7 @@ manager from KDE.")
      `(("extra-cmake-modules" ,extra-cmake-modules)
        ("dbus" ,dbus)
        ("gnupg" ,gnupg)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("akonadi" ,akonadi)
        ("akonadi-contacts" ,akonadi-contacts)
@@ -1535,7 +1535,7 @@ application \"Parts\" to be embedded as a Kontact component (or plugin).")
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
        ("dbus" ,dbus)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("kdoctools" ,kdoctools)))
     (inputs
      `(("akonadi" ,akonadi)
@@ -1662,7 +1662,7 @@ Virtual Contact File}) files to the KPeople contact management library.")
     (build-system qt-build-system)
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("karchive" ,karchive)
        ("akonadi" ,akonadi)
@@ -1721,7 +1721,7 @@ Virtual Contact File}) files to the KPeople contact management library.")
     (build-system qt-build-system)
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("grantlee" ,grantlee)
        ("kcodecs" ,kcodecs)
@@ -1835,7 +1835,7 @@ and allows one to view/extract message formatted text in Rich Text Format.")
     (build-system qt-build-system)
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("akonadi" ,akonadi)
        ("akonadi-contacts" ,akonadi-contacts)
@@ -1883,7 +1883,7 @@ and allows one to view/extract message formatted text in Rich Text Format.")
     (build-system qt-build-system)
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("cyrus-sasl" ,cyrus-sasl)
        ("ki18n" ,ki18n)
@@ -1920,7 +1920,7 @@ various Google services.")
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
        ("kdoctools" ,kdoctools)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("boost" ,boost)
        ("gpgme" ,gpgme)

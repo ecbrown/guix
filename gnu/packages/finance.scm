@@ -131,7 +131,7 @@
        ("pkg-config" ,pkg-config)
        ("python" ,python)               ; for the tests
        ("util-linux" ,util-linux)       ; provides the hexdump command for tests
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("bdb" ,bdb-4.8)                 ; 4.8 required for compatibility
        ("boost" ,boost)
@@ -665,7 +665,7 @@ other machines/servers.  Electroncash does not download the Bitcoin Cash blockch
        ("pkg-config" ,pkg-config)
        ("protobuf" ,protobuf)
        ("python" ,python)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("boost" ,boost)
        ("cppzmq" ,cppzmq)
@@ -1299,7 +1299,7 @@ Trezor wallet.")
      `(("pkg-config" ,pkg-config)
        ("python" ,python)               ; for the tests
        ("util-linux" ,util-linux)       ; provides the hexdump command for tests
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("bdb" ,bdb-5.3)
        ("boost" ,boost)
@@ -1413,7 +1413,7 @@ following three utilities are included with the library:
        ("pkg-config" ,pkg-config)
        ("python" ,python) ; for the tests
        ("util-linux" ,util-linux) ; provides the hexdump command for tests
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("bdb" ,bdb-4.8)
        ("boost" ,boost)
@@ -1493,7 +1493,7 @@ a Qt GUI.")
               (string-append "PREFIX=" %output)
               "features="))))))
     (native-inputs
-     `(("qttools" ,qttools)))
+     `(("qttools" ,qttools-5)))
     (inputs
      `(("python" ,python)
        ("qtbase" ,qtbase-5)
@@ -1564,7 +1564,7 @@ like Flowee the Hub, which Fulcrum connects to over RPC.")
        ("qtbase" ,qtbase-5)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("util-linux" ,util-linux)))       ; provides the hexdump command for tests
     (home-page "https://flowee.org")
     (synopsis "Flowee infrastructure tools and services")

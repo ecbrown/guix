@@ -413,7 +413,7 @@ score, keyboard, guitar, drum and controller views.")
      `(("gettext" ,gettext-minimal)
        ("googletest" ,googletest)
        ("pkg-config" ,pkg-config)
-       ("qtlinguist" ,qttools)))
+       ("qtlinguist" ,qttools-5)))
     (inputs
      `(("boost" ,boost)
        ("chromaprint" ,chromaprint)
@@ -507,7 +507,7 @@ playing your music.")
      `(("gettext" ,gettext-minimal)
        ("googletest" ,googletest)
        ("pkg-config" ,pkg-config)
-       ("qtlinguist" ,qttools)
+       ("qtlinguist" ,qttools-5)
        ("xorg-server" ,xorg-server-for-tests)))
     (inputs
      `(("alsa-lib" ,alsa-lib)
@@ -745,7 +745,7 @@ settings (aliasing, linear interpolation and cubic interpolation).")
     (native-inputs
      `(("cppunit" ,cppunit)
        ("pkg-config" ,pkg-config)
-       ("qtlinguist" ,qttools)))
+       ("qtlinguist" ,qttools-5)))
     (inputs
      `(("alsa-lib" ,alsa-lib)
        ("jack" ,jack-1)
@@ -2041,7 +2041,7 @@ users to select LV2 plugins and run them with jalv.")
        ("qtbase" ,qtbase-5)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (home-page "https://synthv1.sourceforge.io")
     (synopsis "Polyphonic subtractive synthesizer")
     (description
@@ -2074,7 +2074,7 @@ oscillators and stereo effects.")
        ("qtbase" ,qtbase-5)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (home-page "https://drumkv1.sourceforge.io")
     (synopsis "Drum-kit sampler synthesizer with stereo effects")
     (description
@@ -2107,7 +2107,7 @@ effects.")
        ("qtbase" ,qtbase-5)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (home-page "https://samplv1.sourceforge.io")
     (synopsis "Polyphonic sampler synthesizer with stereo effects")
     (description
@@ -2140,7 +2140,7 @@ effects.")
        ("qtbase" ,qtbase-5)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (home-page "https://padthv1.sourceforge.io")
     (synopsis "Polyphonic additive synthesizer")
     (description
@@ -2719,7 +2719,7 @@ browser.")
     (inputs
      `(("qtbase" ,qtbase-5)
        ("qtsvg" ,qtsvg-5)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("alsa-lib" ,alsa-lib)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
@@ -2771,7 +2771,7 @@ backends, including ALSA, OSS, Network and FluidSynth.")
     (native-inputs
      `(("libxslt" ,libxslt) ;for xsltproc
        ("docbook-xsl" ,docbook-xsl)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("pkg-config" ,pkg-config)))
     (home-page "https://vmpk.sourceforge.io/")
     (synopsis "Virtual MIDI piano keyboard")
@@ -3122,7 +3122,7 @@ from the command line.")
        ("zlib" ,zlib)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (home-page "https://qtractor.org/")
     (synopsis "Audio/MIDI multi-track sequencer")
     (description
@@ -4430,7 +4430,7 @@ develop custom plugins for use in other applications without programming.")
        ("lv2" ,lv2)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (home-page "http://qmidiarp.sourceforge.net/")
     (synopsis "MIDI arpeggiator")
     (description "QMidiArp is an advanced MIDI arpeggiator, programmable step
@@ -4458,7 +4458,7 @@ modules running in parallel.")
        ("alsa-lib" ,alsa-lib)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (home-page "http://alsamodular.sourceforge.net/")
     (synopsis "MIDI event router and filter")
     (description "QMidiRoute is a MIDI event router and filter.  MIDI note,
@@ -4620,7 +4620,7 @@ are a C compiler and glib.  Full API documentation and examples are included.")
              #t)))))
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ;; rpmalloc is a public domain memory allocator. This version specified
        ;; below is the version required by LMMS.
        ;; To get the new commit of rpmalloc to use here, run
@@ -4750,7 +4750,7 @@ standalone JACK client and an LV2 plugin is also available.")
        ("qtxmlpatterns" ,qtxmlpatterns-5)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (synopsis "Music composition and notation software")
     (description
      "MuseScore is a music score typesetter.  Its main purpose is the creation
@@ -4828,7 +4828,7 @@ sample library.")
        ("rubberband" ,rubberband)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (home-page "https://muse-sequencer.github.io/")
     (synopsis "MIDI/Audio sequencer")
     (description "MusE is a MIDI/Audio sequencer with recording and editing
@@ -5018,7 +5018,7 @@ specification and header.")
        ("zlib" ,zlib)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qtlinguist" ,qttools)))
+       ("qtlinguist" ,qttools-5)))
     (synopsis "Music composition and editing environment based around a MIDI
 sequencer")
     (description "Rosegarden is a music composition and editing environment
@@ -5508,7 +5508,7 @@ discard bad quality ones.
      `(("gettext" ,gettext-minimal)
        ("hicolor-icon-theme" ,hicolor-icon-theme)
        ("itstool" ,itstool)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (synopsis "Musical instrument tuner")
     (description "FMIT is a graphical utility for tuning musical instruments,
 with error and volume history, and advanced features.")

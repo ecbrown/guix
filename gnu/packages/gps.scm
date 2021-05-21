@@ -89,7 +89,7 @@
        ("zlib" ,zlib)))
     (native-inputs
      `(("which" ,which)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("libxml2" ,libxml2)))              ;'xmllint' needed for the KML tests
     (home-page "https://www.gpsbabel.org/")
     (synopsis "Convert and exchange data with GPS and map programs")
@@ -209,7 +209,7 @@ coordinates as well as partial support for adjustments in global coordinate syst
     (inputs
      `(("qtbase" ,qtbase-5)))
     (native-inputs
-     `(("qttools" ,qttools)))
+     `(("qttools" ,qttools-5)))
     (home-page "https://www.gpxsee.org")
     (synopsis "GPS log file viewer and analyzer")
     (description

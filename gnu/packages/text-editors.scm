@@ -614,7 +614,7 @@ scripts/input/X11/C/Shell/HTML/Dired): 49KB.
     (build-system gnu-build-system)
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))           ; for lrelease
+       ("qttools" ,qttools-5)))           ; for lrelease
     (inputs
      `(("hunspell" ,hunspell)
        ("qtbase" ,qtbase-5)

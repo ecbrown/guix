@@ -356,7 +356,7 @@ It supports JPEG, PNG and GIF formats.")
     (build-system cmake-build-system)
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("qtbase" ,qtbase-5)
        ("qtdeclarative" ,qtdeclarative-5)
@@ -737,7 +737,7 @@ to set X desktop background.")
        ("qtsvg" ,qtsvg-5)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qtlinguist" ,qttools)))
+       ("qtlinguist" ,qttools-5)))
     (synopsis "Image viewer supporting all common formats")
     (description "Nomacs is a simple to use image lounge featuring
 semi-transparent widgets that display additional information such as metadata,

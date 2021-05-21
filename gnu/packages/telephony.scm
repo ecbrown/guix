@@ -651,7 +651,7 @@ address of one of the participants.")
     (native-inputs
      `(("pkg-config" ,pkg-config)
        ("python" ,python)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (synopsis "Low-latency, high quality voice chat software")
     (description
      "Mumble is an low-latency, high quality voice chat
@@ -695,7 +695,7 @@ Mumble consists of two applications for separate usage:
     (native-inputs
      `(("bison" ,bison)
        ("flex" ,flex)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("alsa-lib" ,alsa-lib)
        ("bcg729" ,bcg729)

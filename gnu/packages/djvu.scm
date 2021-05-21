@@ -113,7 +113,7 @@ utilities.")
        ("automake" ,automake)
        ("libtool" ,libtool)
        ("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("djvulibre" ,djvulibre)
        ("glib" ,glib)

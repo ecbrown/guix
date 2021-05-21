@@ -938,7 +938,7 @@ H.264 (MPEG-4 AVC) video streams.")
        ("perl" ,perl)
        ("pkg-config" ,pkg-config)
        ("po4a" ,po4a)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("ruby" ,ruby)))
     (arguments
      `(#:configure-flags
@@ -2701,7 +2701,7 @@ for use with HTML5 video.")
      `(("perl" ,perl)
        ("pkg-config" ,pkg-config)
        ("python" ,python-wrapper)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("yasm" ,yasm)))
     ;; FIXME: Once packaged, add libraries not found during the build.
     (inputs

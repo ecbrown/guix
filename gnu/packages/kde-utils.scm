@@ -343,7 +343,7 @@ either be created or generated from a image.")
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
        ("kdoctools" ,kdoctools)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("shared-mime-info" ,shared-mime-info)))
     (inputs
      `(("kbookmarks" ,kbookmarks)

@@ -378,7 +378,7 @@ audio or video backends, ensuring good performance.")
          ("qtmultimedia" ,qtmultimedia-5)
          ("libsndfile" ,libsndfile)))
       (native-inputs
-       `(("qttools" ,qttools)))
+       `(("qttools" ,qttools-5)))
       (home-page "https://www.lostmarble.com/papagayo/")
       (synopsis "Lip-syncing for animations")
       (description

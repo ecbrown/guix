@@ -453,7 +453,7 @@ desktops.")
              #t)))))
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("boost" ,boost)
        ("libtorrent-rasterbar" ,libtorrent-rasterbar)

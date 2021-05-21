@@ -498,7 +498,7 @@ implementation of Adaptive Multi Rate Narrowband and Wideband
        ("qtbase" ,qtbase-5)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (home-page "http://alsamodular.sourceforge.net/")
     (synopsis "Realtime modular synthesizer and effect processor")
     (description
@@ -2737,7 +2737,7 @@ different audio devices such as ALSA or PulseAudio.")
        ("qtx11extras" ,qtx11extras-5)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (home-page "https://qjackctl.sourceforge.io/")
     (synopsis "Jack server control application")
     (description "Control a Jack server.  Allows you to plug various sources
@@ -2865,7 +2865,7 @@ link REQUIRED)"))
     (native-inputs
      `(("ableton-link" ,ableton-link)
        ("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("xorg-server" ,xorg-server-for-tests)))
     (inputs
      `(("jack" ,jack-1)
@@ -3554,7 +3554,7 @@ interface.")
     (arguments
      `(#:tests? #f))                    ; no "check" phase
     (native-inputs
-     `(("qttools" ,qttools)
+     `(("qttools" ,qttools-5)
        ("pkg-config" ,pkg-config)))
     (inputs
      `(("fluidsynth" ,fluidsynth)
@@ -5095,7 +5095,7 @@ Rate} 3600x2250 bit/s vocoder used in various radio systems.")
        ("portaudio" ,portaudio) ;for portaudio examples
        ("qtbase" ,qtbase-5)       ;for Qt examples
        ("qtdeclarative" ,qtdeclarative-5)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("jack" ,jack-1)                       ;for JACK examples
        ("qtquickcontrols" ,qtquickcontrols))) ;for Qt examples

@@ -610,7 +610,7 @@ The following systems are supported:
        (list "-DUSE_LZMA=OFF"           ;do not use bundled LZMA
              "-DUSE_LIBZIP=OFF")))      ;use "zlib" instead
     (native-inputs `(("pkg-config" ,pkg-config)
-                     ("qttools" ,qttools)))
+                     ("qttools" ,qttools-5)))
     (inputs `(("ffmpeg" ,ffmpeg)
               ("libedit" ,libedit)
               ("libelf" ,libelf)

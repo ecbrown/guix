@@ -2318,7 +2318,7 @@ ASCII text files using Gmsh's own scripting language.")
     (native-inputs
      `(("pkg-config" ,pkg-config)
        ;;("python-astropy" ,python-astropy) ;; FIXME: Package this.
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("python-sip" ,python-sip-4)))
     (inputs
      `(("ghostscript" ,ghostscript) ;optional, for EPS/PS output
@@ -4548,7 +4548,7 @@ evaluates expressions using the standard order of operations.")
     (build-system gnu-build-system)
     (native-inputs `(("gettext" ,gettext-minimal)
                      ("qtbase" ,qtbase-5)
-                     ("qttools" ,qttools)))
+                     ("qttools" ,qttools-5)))
     (inputs `(("libx11" ,libx11)
               ("zlib" ,zlib)
               ("libpng" ,libpng)
@@ -6064,7 +6064,7 @@ functions.")
         "0vh7cd1915bjqzkdp3sk25ngy8cq624mkh8c53c5bnzk357kb0fk"))))
     (build-system cmake-build-system)
     (inputs `(("qtbase" ,qtbase-5)))
-    (native-inputs `(("qttools" ,qttools)))
+    (native-inputs `(("qttools" ,qttools-5)))
     (arguments
      `(#:phases
        (modify-phases %standard-phases

@@ -150,7 +150,7 @@ sharing) to clients via USB, ethernet, WiFi, cellular and Bluetooth.")
     (inputs
      `(("qtbase" ,qtbase-5)))
     (native-inputs
-     `(("qttools" ,qttools)))
+     `(("qttools" ,qttools-5)))
     (build-system gnu-build-system)
     (arguments
      '(#:phases

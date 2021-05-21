@@ -594,7 +594,7 @@ decentralized calling using P2P-DHT.")
        ))
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("doxygen" ,doxygen)
        ("graphviz" ,graphviz)))
     (inputs

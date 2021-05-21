@@ -1822,7 +1822,7 @@ parsing, viewing, modifying, and saving this metadata.")
          "1z77igs60lz106vsf6wsayxjafxm3llf2lm4dpvsqyyrxybfq191"))))
     (build-system qt-build-system)
     (native-inputs
-     `(("qttools" ,qttools)))
+     `(("qttools" ,qttools-5)))
     (inputs
      `(("qtbase" ,qtbase-5)
        ("qtsvg" ,qtsvg-5)))

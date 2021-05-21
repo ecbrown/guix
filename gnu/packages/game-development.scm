@@ -465,7 +465,7 @@ support.")
        ("qtsvg" ,qtsvg-5)
        ("zlib" ,zlib)))
     (native-inputs
-     `(("qttools" ,qttools)))
+     `(("qttools" ,qttools-5)))
     (arguments
      '(#:phases
        (modify-phases %standard-phases

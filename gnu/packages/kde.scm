@@ -236,7 +236,7 @@ browser for easy news reading.")
       (native-inputs
        `(("extra-cmake-modules" ,extra-cmake-modules)
          ("pkg-config" ,pkg-config)
-         ("qttools" ,qttools)))
+         ("qttools" ,qttools-5)))
       (inputs
        `(("shared-mime-info" ,shared-mime-info)
          ("frei0r-plugins" ,frei0r-plugins)
@@ -324,7 +324,7 @@ projects.")
      `(("extra-cmake-modules" ,extra-cmake-modules)
        ("pkg-config" ,pkg-config)
        ("shared-mime-info" ,shared-mime-info)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("boost" ,boost)
        ("clang" ,clang)
@@ -443,7 +443,7 @@ for some KDevelop language plugins (Ruby, PHP, CSS...).")
     (build-system qt-build-system)
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("qtbase" ,qtbase-5)
        ("qtsvg" ,qtsvg-5)))
@@ -690,7 +690,7 @@ cards.")
      `(("qtbase" ,qtbase-5)))
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (home-page "https://techbase.kde.org/Projects/Snorenotify")
     (synopsis "Qt notification framework")
     (description "Snorenotify is a multi platform Qt notification framework.
@@ -809,7 +809,7 @@ communicate with each other.  Here's a few things KDE Connect can do:
        ("extra-cmake-modules" ,extra-cmake-modules)
        ("pkg-config" ,pkg-config)
        ("python" ,python-wrapper)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("breeze" ,breeze) ;for dark themes
        ("breeze-icons" ,breeze-icons) ;for icons
@@ -927,7 +927,7 @@ unmount drives and view them in a file manager.")
      `(("extra-cmake-modules" ,extra-cmake-modules)
        ("perl" ,perl)
        ("python" ,python)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("kdoctools" ,kdoctools)))
     (inputs
      `(("qtbase" ,qtbase-5)
@@ -1184,7 +1184,7 @@ or Bonjour by other projects).")
     (build-system qt-build-system)
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ;; For optional component "Survey target expression parser"
        ("bison" ,bison)
        ("flex" ,flex)

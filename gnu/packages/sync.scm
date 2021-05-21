@@ -177,7 +177,7 @@
        ("perl" ,perl)
        ("pkg-config" ,pkg-config)
        ("python" ,python-wrapper)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("ruby" ,ruby)))
     (inputs
      `(("appstream" ,appstream)
@@ -350,7 +350,7 @@ See also: megacmd, the official tool set by MEGA.")
        ("extra-cmake-modules" ,extra-cmake-modules)
        ("perl" ,perl)
        ("pkg-config" ,pkg-config)
-       ("qtlinguist" ,qttools)))
+       ("qtlinguist" ,qttools-5)))
     (inputs
      `(("qtbase" ,qtbase-5)
        ("qtkeychain" ,qtkeychain)

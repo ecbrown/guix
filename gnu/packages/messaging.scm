@@ -1609,7 +1609,7 @@ instant messenger with audio and video chat capabilities.")
        ("sqlcipher" ,sqlcipher)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qmake" ,qttools)))
+       ("qmake" ,qttools-5)))
     (home-page "https://qtox.github.io/")
     (synopsis "Tox chat client using Qt")
     (description "qTox is a Tox client that follows the Tox design
@@ -2340,7 +2340,7 @@ for the Matrix protocol.  It is built on to of @code{Boost.Asio}.")
        ("zlib" ,zlib)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qtlinguist" ,qttools)))
+       ("qtlinguist" ,qttools-5)))
     (home-page "https://github.com/Nheko-Reborn/nheko")
     (synopsis "Desktop client for Matrix using Qt and C++14")
     (description "@code{Nheko} want to provide a native desktop app for the
@@ -2388,7 +2388,7 @@ There is support for:
        ("qtquickcontrols" ,qtquickcontrols)
        ("qtquickcontrols2" ,qtquickcontrols2)
        ("qtsvg" ,qtsvg-5)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("xdg-utils" ,xdg-utils)))
     (arguments
      `(#:tests? #f))                    ; no tests

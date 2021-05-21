@@ -852,7 +852,7 @@ and video calls or instant messaging capabilities to an application.")
                         grammar-dest)))))))
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("bctoolbox" ,bctoolbox)
        ("belcard" ,belcard)

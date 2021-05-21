@@ -112,7 +112,7 @@ restrictions that stem from limitations of the standard RCX firmware.")
                 "02kv1m18g6s4dady9jv4sjivfkrp192bmdw2a3d9lzlp60zks0p2"))))
     (build-system gnu-build-system)
     (native-inputs
-     `(("qttools" ,qttools)))           ; for lrelease
+     `(("qttools" ,qttools-5)))           ; for lrelease
     (inputs
      `(("mesa" ,mesa)
        ("qtbase" ,qtbase-5)

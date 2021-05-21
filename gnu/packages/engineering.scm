@@ -2051,7 +2051,7 @@ parallel computing platforms.  It also supports serial execution.")
        ("qtsvg" ,qtsvg-5)
        ("zlib" ,zlib)))
     (native-inputs
-     `(("qttools" ,qttools)             ; for lrelease
+     `(("qttools" ,qttools-5)             ; for lrelease
        ("unzip" ,unzip)))
     (arguments
      `(#:phases
@@ -2385,7 +2385,7 @@ comments.")))
     (native-inputs
      `(("doxygen" ,doxygen)
        ("graphviz" ,graphviz)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("pkg-config" ,pkg-config)
        ("python-pyside-2-tools" ,python-pyside-2-tools)
        ("swig" ,swig)))

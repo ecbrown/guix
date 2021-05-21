@@ -163,7 +163,7 @@ common build settings used in software produced by the KDE community.")
      ;; TODO: Add building the super experimental QML support
      `(("extra-cmake-modules" ,extra-cmake-modules)
        ("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("qtbase" ,qtbase-5)))
     (arguments
@@ -202,7 +202,7 @@ common build settings used in software produced by the KDE community.")
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
        ("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("qtbase" ,qtbase-5)
        ("phonon" ,phonon)
@@ -483,7 +483,7 @@ and the older vCalendar.")
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
        ("gperf" ,gperf)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("qtbase" ,qtbase-5)))
     (home-page "https://community.kde.org/Frameworks")
@@ -520,7 +520,7 @@ Internet).")
      `(("dbus" ,dbus)
        ("extra-cmake-modules" ,extra-cmake-modules)
        ("inetutils" ,inetutils)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("xorg-server" ,xorg-server-for-tests)))
     (inputs
      `(("qtbase" ,qtbase-5)))
@@ -583,7 +583,7 @@ propagate their changes to their respective configuration files.")
     (build-system cmake-build-system)
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("shared-mime-info" ,shared-mime-info)
        ;; TODO: FAM: File alteration notification http://oss.sgi.com/projects/fam
        ("xorg-server" ,xorg-server-for-tests))) ; for the tests
@@ -642,7 +642,7 @@ many more.")
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
        ("dbus" ,dbus)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("qtbase" ,qtbase-5)
        ("qtx11extras" ,qtx11extras-5)
@@ -685,7 +685,7 @@ as well as an API to create KDED modules.")
     (build-system cmake-build-system)
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("avahi" ,avahi) ; alternativly dnssd could be used
        ("qtbase" ,qtbase-5)))
@@ -782,7 +782,7 @@ interfaces in the areas of colors, fonts, text, images, keyboard input.")
              #t)))))
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("qtbase" ,qtbase-5)
        ("qtdeclarative" ,qtdeclarative-5)))
@@ -883,7 +883,7 @@ or user activity.")
     (build-system cmake-build-system)
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("kwindowsystem" ,kwindowsystem)
        ;; TODO: Find a way to activate this optional include without
@@ -969,7 +969,7 @@ model to observers
     (build-system qt-build-system)
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("qtbase" ,qtbase-5)))
     (home-page "https://community.kde.org/Frameworks")
@@ -995,7 +995,7 @@ to flat and hierarchical lists.")
     (build-system qt-build-system)
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("qtbase" ,qtbase-5)))
     (home-page "https://community.kde.org/Frameworks")
@@ -1024,7 +1024,7 @@ pixel units.")
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
        ("perl" ,perl)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ;; Optional, for compile-time validation of syntax definition files:
        ("qtxmlpatterns" ,qtxmlpatterns-5)))
     (inputs
@@ -1113,7 +1113,7 @@ represented by a QPoint or a QSize.")
     (build-system qt-build-system)
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("xorg-server" ,xorg-server-for-tests)))
     (inputs
      `(("qtbase" ,qtbase-5)))
@@ -1153,7 +1153,7 @@ configuration pages, message boxes, and password requests.")
        ("pkg-config" ,pkg-config)
        ("dbus" ,dbus) ; for the tests
        ("openbox" ,openbox) ; for the tests
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("xorg-server" ,xorg-server-for-tests))) ; for the tests
     (inputs
      `(("libxrender" ,libxrender)
@@ -1415,7 +1415,7 @@ feel.")
        ("dbus" ,dbus)
        ("extra-cmake-modules" ,extra-cmake-modules)
        ("flex" ,flex)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("qtbase" ,qtbase-5)
        ("qtdeclarative" ,qtdeclarative-5)
@@ -1445,7 +1445,7 @@ system.")
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
        ("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("hunspell" ,hunspell)
        ;; TODO: hspell (for Hebrew), Voikko (for Finish)
@@ -1549,7 +1549,7 @@ with other frameworks.")
     (native-inputs
      `(("dbus" ,dbus)
        ("extra-cmake-modules" ,extra-cmake-modules)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("kcoreaddons" ,kcoreaddons)
        ("polkit-qt" ,polkit-qt)
@@ -1595,7 +1595,7 @@ utilities.")
     (build-system qt-build-system)
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("kconfig" ,kconfig)
        ("kwidgetsaddons" ,kwidgetsaddons)
@@ -1861,7 +1861,7 @@ formats.")
     (build-system cmake-build-system)
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("kcoreaddons" ,kcoreaddons)
        ("kwidgetsaddons" ,kwidgetsaddons)
@@ -1890,7 +1890,7 @@ asynchronous jobs.")
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
        ("dbus" ,dbus)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("kcodecs" ,kcodecs)
        ("kconfig" ,kconfig)
@@ -2210,7 +2210,7 @@ by which applications, and what documents have been linked to which activity.")
      `(("kwidgetsaddons" ,kwidgetsaddons)))
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("kauth" ,kauth)
        ("kcodecs" ,kcodecs)
@@ -2317,7 +2317,7 @@ KCModules can be created with the KConfigWidgets framework.")
        ("ki18n" ,ki18n)
        ;; todo: PythonModuleGeneration
        ("qtbase" ,qtbase-5)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (arguments
      `(#:phases
        (modify-phases %standard-phases
@@ -2448,7 +2448,7 @@ started on demand.")
     (build-system qt-build-system)
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("kconfig" ,kconfig)
        ("kcoreaddons" ,kcoreaddons)
@@ -2522,7 +2522,7 @@ with su and ssh respectively.")
     (build-system cmake-build-system)
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("kconfig" ,kconfig)
        ("kcoreaddons" ,kcoreaddons)
@@ -2596,7 +2596,7 @@ emoticons coming from different providers.")
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
        ("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("kconfig" ,kconfig)
        ("kcrash" ,kcrash)
@@ -2631,7 +2631,7 @@ window does not need focus for them to be activated.")
     (build-system cmake-build-system)
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("shared-mime-info" ,shared-mime-info)))
     (inputs
      `(("karchive" ,karchive)
@@ -2761,7 +2761,7 @@ consumption.")
        ("solid" ,solid)))
     (native-inputs
      `(("dbus" ,dbus)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("extra-cmake-modules" ,extra-cmake-modules)))
     (inputs
      `(;; TODO:  LibACL , <ftp://oss.sgi.com/projects/xfs/cmd_tars>
@@ -3250,7 +3250,7 @@ library.")
        ("sonnet" ,sonnet)))
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("kauth" ,kauth)
        ("kcodecs" ,kcodecs)
@@ -3332,7 +3332,7 @@ the passwords on KDE work spaces.")
        ("kconfigwidgets" ,kconfigwidgets)))
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("attica" ,attica)
        ("kauth" ,kauth)
@@ -3671,7 +3671,7 @@ workspace.")
        ("networkmanager-qt" ,networkmanager-qt)
        ("openssl" ,openssl)
        ("qtsvg" ,qtsvg-5)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("qtx11extras" ,qtx11extras-5)))
     ;; FIXME: Use Guix ca-bundle.crt in etc/xdg/ksslcalist and
     ;; share/kf5/kssl/ca-bundle.crt
@@ -3827,7 +3827,7 @@ support.")
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
        ("kdoctools" ,kdoctools)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("ki18n" ,ki18n)
        ("kjs" ,kjs)
@@ -3856,7 +3856,7 @@ QObjects, so you can script your applications.")
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
        ("kdoctools" ,kdoctools)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("kcompletion" ,kcompletion)
        ("kcoreaddons" ,kcoreaddons)
@@ -3894,7 +3894,7 @@ KParts instead.")
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
        ("kdoctools" ,kdoctools)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("kcompletion" ,kcompletion)
        ("kcoreaddons" ,kcoreaddons)

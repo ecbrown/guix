@@ -92,7 +92,7 @@
        ("zlib" ,zlib)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("util-linux" ,util-linux)))
     (home-page "https://www.scribus.net")
     (synopsis "Desktop publishing and page layout program")

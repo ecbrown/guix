@@ -109,7 +109,7 @@ hundred times faster than real-time.")
          ("protobuf" ,protobuf-3.5)               ;for logging
          ("qtbase" ,qtbase-5)
          ("qtsvg" ,qtsvg-5)
-         ("qttools" ,qttools)              ;for libQt5Help, needed by "studio"
+         ("qttools" ,qttools-5)              ;for libQt5Help, needed by "studio"
          ("qtwebkit" ,qtwebkit)
          ("qtx11extras" ,qtx11extras-5)
          ("eudev" ,eudev)

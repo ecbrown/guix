@@ -186,7 +186,7 @@
          (add-after 'install 'qt-wrap
            (assoc-ref qt:%standard-phases 'qt-wrap)))))
     (native-inputs
-     `(("qttools" ,qttools)))
+     `(("qttools" ,qttools-5)))
     (inputs
      `(("qtbase" ,qtbase-5)
        ("qtsvg" ,qtsvg-5)))
@@ -1404,6 +1404,32 @@ native APIs where it makes sense.")))
 positioning and geolocation plugins.")))
 
 (define-public qttools
+  (package (inherit qtsvg)
+    (name "qttools")
+    (version "6.1.0")
+    (source (origin
+             (method url-fetch)
+             (uri (qt5-urls name version))
+             (sha256
+              (base32
+               "0ghz89zdf2wgck4mwsfip2xh9sp01gf54yyk842hp8r024606qv2"))))
+    (arguments
+     (substitute-keyword-arguments (package-arguments qtsvg)
+       ((#:tests? _ #f) #f))) ; TODO: Enable the tests
+    (native-inputs
+     `(("libxkbcommon" ,libxkbcommon)
+       ("perl" ,perl)
+       ("qtdeclarative" ,qtdeclarative)
+       ("vulkan-headers" ,vulkan-headers)))
+    (inputs
+     `(("mesa" ,mesa)
+       ("qtbase" ,qtbase)))
+    (synopsis "Qt Tools and Designer modules")
+    (description "The Qt Tools module provides a set of applications to browse
+the documentation, translate applications, generate help files and other stuff
+that helps in Qt development.")))
+
+(define-public qttools-5
   (package (inherit qtsvg-5)
     (name "qttools")
     (version "5.15.2")
@@ -1441,7 +1467,7 @@ that helps in Qt development.")))
              (patches (search-patches "qtscript-disable-tests.patch"))))
     (native-inputs
      `(("perl" ,perl)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("qtbase" ,qtbase-5)))
     (synopsis "Qt Script module")
@@ -1744,7 +1770,7 @@ message.")))
      `(#:tests? #f))                    ;no test
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("enchant" ,enchant)
        ("qtbase" ,qtbase-5)))
@@ -2224,7 +2250,7 @@ module provides support functions to the automatically generated code.")
        ("qtsensors" ,qtsensors-5)
        ("qtserialport" ,qtserialport-5)
        ("qtsvg" ,qtsvg-5)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("qtwebchannel" ,qtwebchannel-5)
        ("qtwebkit" ,qtwebkit)
        ("qtwebsockets" ,qtwebsockets-5)
@@ -2570,7 +2596,7 @@ This package provides the Python bindings.")))
     (build-system cmake-build-system)
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("qtbase" ,qtbase-5)))
     (arguments
@@ -2717,7 +2743,7 @@ that can be only started once per user.
   (inputs
    `(("qtbase" ,qtbase-5)
      ("qtsvg" ,qtsvg-5)
-     ("qttools" ,qttools)))
+     ("qttools" ,qttools-5)))
   (arguments
    `(#:phases
      (modify-phases %standard-phases
@@ -2861,7 +2887,7 @@ time Web content can be enhanced with native controls.")
          "09fz6v8rp28997f235yaifj8p4vvsyv45knc1iivgdvx7msgcd0m"))))
     (build-system cmake-build-system)
     (native-inputs
-     `(("qttools" ,qttools)))
+     `(("qttools" ,qttools-5)))
     (inputs
      `(("qtbase" ,qtbase-5)
        ("qtdeclarative" ,qtdeclarative-5)))
@@ -2899,7 +2925,7 @@ a binding language:
       (build-system cmake-build-system)
       (arguments `(#:tests? #f)) ; There are no tests
       (native-inputs
-       `(("qttools" ,qttools)))
+       `(("qttools" ,qttools-5)))
       (inputs
        `(("qtbase" ,qtbase-5)))
       (home-page "https://gitlab.com/mattia.basaglia/Qt-Color-Widgets")
@@ -3048,7 +3074,7 @@ color-related widgets.")
     (native-inputs
      `(("cmake" ,cmake-minimal)
        ("python" ,python-wrapper)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("which" ,which)))
     (arguments
      `(#:tests? #f
@@ -3142,7 +3168,7 @@ generate Python bindings for your C or C++ code.")
              (apply invoke (cons "qmake" make-flags)))))))
     (native-inputs
      `(("qtbase" ,qtbase-5)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("glu" ,glu)))
     (home-page "http://libqglviewer.com")

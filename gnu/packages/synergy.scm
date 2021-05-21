@@ -73,7 +73,7 @@
                  (("/usr") out))
                #t))))))
     (native-inputs
-     `(("qttools" ,qttools)))           ; for Qt5LinguistTools
+     `(("qttools" ,qttools-5)))           ; for Qt5LinguistTools
     (inputs
      `(("avahi" ,avahi)
        ("python"  ,python-wrapper)

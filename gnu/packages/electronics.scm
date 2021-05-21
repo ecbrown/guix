@@ -270,7 +270,7 @@ format support.")
                #t))))))
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("boost" ,boost)
        ("glib" ,glib)

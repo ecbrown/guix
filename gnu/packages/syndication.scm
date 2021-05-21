@@ -563,7 +563,7 @@ formats, including all versions of RSS and Atom.")
                                     "/bin/lrelease")))))))
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("qtwebkit" ,qtwebkit)
        ("qtbase" ,qtbase-5)

@@ -1497,7 +1497,7 @@ exec -a \"$0\" ~a/.brdf-real~%"
                             (chmod "brdf" #o555)))
                         #t)))))
       (native-inputs
-       `(("qttools" ,qttools))) ;for 'qmake'
+       `(("qttools" ,qttools-5))) ;for 'qmake'
       (inputs
        `(("qtbase" ,qtbase-5)
          ("mesa" ,mesa)

@@ -185,7 +185,7 @@ of categories with some of the activities available in that category.
        ("gettext" ,gettext-minimal)
        ("kdoctools" ,kdoctools)
        ("perl" ,perl)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("xorg-server" ,xorg-server-for-tests)))
     (inputs
      `(("openssl" ,openssl)

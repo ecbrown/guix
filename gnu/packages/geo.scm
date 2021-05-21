@@ -1239,7 +1239,7 @@ map display.  Downloads map data from a number of websites, including
              #t)))
        #:tests? #f)) ; no tests
     (native-inputs
-     `(("qttools" ,qttools)))
+     `(("qttools" ,qttools-5)))
     (inputs
      `(("bzip2" ,bzip2)
        ("font-liberation" ,font-liberation)
@@ -1658,7 +1658,7 @@ using the dataset of topographical information collected by
     (build-system qt-build-system)
     (native-inputs
      `(("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("gdal" ,gdal)
        ("libjpeg-turbo" ,libjpeg-turbo)
@@ -2300,7 +2300,7 @@ growing set of geoscientific methods.")
        ("pkg-config" ,pkg-config)
        ("python-mock" ,python-mock)
        ("python-nose2" ,python-nose2)
-       ("qttools" ,qttools)
+       ("qttools" ,qttools-5)
        ("shellcheck" ,shellcheck)
        ("xorg-server" ,xorg-server-for-tests)))
     (home-page "https://qgis.org")

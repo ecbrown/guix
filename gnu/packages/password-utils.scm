@@ -151,7 +151,7 @@ human.")
              #t)))))
     (native-inputs
      `(("asciidoctor" ,ruby-asciidoctor)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("argon2" ,argon2)
        ("libgcrypt" ,libgcrypt)
@@ -695,7 +695,7 @@ key URIs using the standard otpauth:// scheme.")
              (setenv "QT_QPA_PLATFORM" "offscreen")
              #t)))))
     (native-inputs
-     `(("qttools" ,qttools)))
+     `(("qttools" ,qttools-5)))
     (inputs
      `(("qtbase" ,qtbase-5)
        ("qtsvg" ,qtsvg-5)))

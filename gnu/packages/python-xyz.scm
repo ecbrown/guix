@@ -23246,7 +23246,7 @@ with features similar to the @command{wget} utility.")
         ("python-translation-finder" ,python-translation-finder)
         ("python-watchdog" ,python-watchdog)))
     (native-inputs
-     `(("qttools" ,qttools)))
+     `(("qttools" ,qttools-5)))
     (home-page "https://framagit.org/tyreunom/offlate")
     (synopsis "Offline translation interface for online translation tools")
     (description "Offlate offers a unified interface for different translation

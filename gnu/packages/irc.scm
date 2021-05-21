@@ -125,7 +125,7 @@
     (native-inputs
      `(("extra-cmake-modules" ,extra-cmake-modules)
        ("pkg-config" ,pkg-config)
-       ("qttools" ,qttools)))
+       ("qttools" ,qttools-5)))
     (inputs
      `(("inxi" ,inxi-minimal)
        ("libdbusmenu-qt" ,libdbusmenu-qt)
