@@ -199,7 +199,7 @@
        ("qtquickcontrols2" ,qtquickcontrols2)
        ("qtsolutions" ,qtsolutions)
        ("qtsvg" ,qtsvg-5)
-       ("qtwebchannel" ,qtwebchannel)
+       ("qtwebchannel" ,qtwebchannel-5)
        ("qtwebsockets" ,qtwebsockets-5)
        ("qtwebkit" ,qtwebkit)
        ("sqlite" ,sqlite)

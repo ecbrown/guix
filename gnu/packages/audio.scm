@@ -2883,7 +2883,7 @@ link REQUIRED)"))
        ("qtbase" ,qtbase-5)
        ("qtdeclarative" ,qtdeclarative-5)
        ("qtsvg" ,qtsvg-5)
-       ("qtwebchannel" ,qtwebchannel)
+       ("qtwebchannel" ,qtwebchannel-5)
        ("qtwebsockets" ,qtwebsockets-5)))
     (propagated-inputs                  ;to get native-search-path
      `(("qtwebengine" ,qtwebengine)))

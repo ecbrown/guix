@@ -1666,7 +1666,7 @@ using the dataset of topographical information collected by
        ("qtbase" ,qtbase-5)
        ("qtdeclarative" ,qtdeclarative-5)
        ("qtlocation" ,qtlocation)
-       ("qtwebchannel" ,qtwebchannel)
+       ("qtwebchannel" ,qtwebchannel-5)
        ("qtwebengine" ,qtwebengine)
        ("quazip" ,quazip)
        ("routino" ,routino)
