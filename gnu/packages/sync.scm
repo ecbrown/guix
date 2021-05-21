@@ -200,7 +200,7 @@
        ("qtsolutions" ,qtsolutions)
        ("qtsvg" ,qtsvg-5)
        ("qtwebchannel" ,qtwebchannel)
-       ("qtwebsockets" ,qtwebsockets)
+       ("qtwebsockets" ,qtwebsockets-5)
        ("qtwebkit" ,qtwebkit)
        ("sqlite" ,sqlite)
        ("xdg-utils" ,xdg-utils)

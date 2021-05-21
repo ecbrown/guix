@@ -2884,7 +2884,7 @@ link REQUIRED)"))
        ("qtdeclarative" ,qtdeclarative-5)
        ("qtsvg" ,qtsvg-5)
        ("qtwebchannel" ,qtwebchannel)
-       ("qtwebsockets" ,qtwebsockets)))
+       ("qtwebsockets" ,qtwebsockets-5)))
     (propagated-inputs                  ;to get native-search-path
      `(("qtwebengine" ,qtwebengine)))
     (home-page "https://github.com/supercollider/supercollider")

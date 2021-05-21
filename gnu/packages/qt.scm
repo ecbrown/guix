@@ -1030,7 +1030,7 @@ with JavaScript and C++.")))
     (description "The Qt Connectivity modules provides modules for interacting
 with Bluetooth and NFC.")))
 
-(define-public qtwebsockets
+(define-public qtwebsockets-5
   (package (inherit qtsvg-5)
     (name "qtwebsockets")
     (version "5.15.2")
@@ -1054,7 +1054,7 @@ WebSockets module provides C++ and QML interfaces that enable Qt applications
 to act as a server that can process WebSocket requests, or a client that can
 consume data received from the server, or both.")))
 
-(define-public qtsensors
+(define-public qtsensors-5
   (package (inherit qtsvg-5)
     (name "qtsensors")
     (version "5.15.2")
@@ -1260,7 +1260,7 @@ and others.")))
     (native-inputs
      `(("perl" ,perl)
        ("qtdeclarative" ,qtdeclarative-5)
-       ("qtwebsockets" ,qtwebsockets)))
+       ("qtwebsockets" ,qtwebsockets-5)))
     (inputs `(("qtbase" ,qtbase-5)))
     (synopsis "Web communication library for Qt")
     (description "The Qt WebChannel module enables peer-to-peer communication
@@ -1291,7 +1291,7 @@ popular web engines, Qt WebKit 2 and Qt WebEngine.")))
      `(("mesa" ,mesa)
        ("qtbase" ,qtbase-5)
        ("qtdeclarative" ,qtdeclarative-5)
-       ("qtwebsockets" ,qtwebsockets)
+       ("qtwebsockets" ,qtwebsockets-5)
        ("zlib" ,zlib)))
     (synopsis "QPA plugin for running an application via a browser using
 streamed WebGL commands")
@@ -2175,7 +2175,7 @@ module provides support functions to the automatically generated code.")
        ("qttools" ,qttools)
        ("qtwebchannel" ,qtwebchannel)
        ("qtwebkit" ,qtwebkit)
-       ("qtwebsockets" ,qtwebsockets)
+       ("qtwebsockets" ,qtwebsockets-5)
        ("qtx11extras" ,qtx11extras-5)
        ("qtxmlpatterns" ,qtxmlpatterns-5)))
     (arguments
@@ -2988,7 +2988,7 @@ color-related widgets.")
        ("qtspeech" ,qtspeech)
        ("qtsvg" ,qtsvg-5)
        ("qtwebchannel" ,qtwebchannel)
-       ("qtwebsockets" ,qtwebsockets)
+       ("qtwebsockets" ,qtwebsockets-5)
        ("qtx11extras" ,qtx11extras-5)
        ("qtxmlpatterns" ,qtxmlpatterns-5)))
     (propagated-inputs
