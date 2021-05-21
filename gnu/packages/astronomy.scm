@@ -413,7 +413,7 @@ deconvolution).  Such post-processing is not performed by Stackistry.")
     (build-system cmake-build-system)
     (inputs
      `(("qtbase" ,qtbase-5)
-       ("qtlocation" ,qtlocation)
+       ("qtlocation" ,qtlocation-5)
        ("qtmultimedia" ,qtmultimedia-5)
        ("qtscript" ,qtscript)
        ("qtserialport" ,qtserialport-5)
