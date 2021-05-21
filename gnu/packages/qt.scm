@@ -1236,7 +1236,7 @@ compositor libraries.")))
     (description "The Qt Wayland module provides the QtWayland client and
 compositor libraries.")))
 
-(define-public qtserialport
+(define-public qtserialport-5
   (package (inherit qtsvg-5)
     (name "qtserialport")
     (version "5.15.2")
@@ -1293,7 +1293,7 @@ interacting with serial ports from within Qt.")))
     (inputs
      `(("libsocketcan" ,libsocketcan)
        ("qtbase" ,qtbase-5)
-       ("qtserialport" ,qtserialport)))
+       ("qtserialport" ,qtserialport-5)))
     (synopsis "Qt Serial Bus module")
     (description "The Qt Serial Bus API provides classes and functions to
 access the various industrial serial buses and protocols, such as CAN, ModBus,
@@ -1393,7 +1393,7 @@ native APIs where it makes sense.")))
      `(("perl" ,perl)
        ("qtdeclarative" ,qtdeclarative-5)
        ("qtquickcontrols" ,qtquickcontrols)
-       ("qtserialport" ,qtserialport)))
+       ("qtserialport" ,qtserialport-5)))
     (inputs
      `(("icu4c" ,icu4c)
        ("openssl" ,openssl)
@@ -2222,7 +2222,7 @@ module provides support functions to the automatically generated code.")
        ("qtlocation" ,qtlocation)
        ("qtmultimedia" ,qtmultimedia-5)
        ("qtsensors" ,qtsensors-5)
-       ("qtserialport" ,qtserialport)
+       ("qtserialport" ,qtserialport-5)
        ("qtsvg" ,qtsvg-5)
        ("qttools" ,qttools)
        ("qtwebchannel" ,qtwebchannel)

@@ -842,7 +842,7 @@ communicate with each other.  Here's a few things KDE Connect can do:
        ("libcerf" ,libcerf)
        ("lz4" ,lz4)
        ("netcdf" ,netcdf)
-       ("qtserialport" ,qtserialport)
+       ("qtserialport" ,qtserialport-5)
        ("zlib" ,zlib)))
     (home-page "https://labplot.kde.org/")
     (synopsis "Interactive graphing and analysis of scientific data")

@@ -950,7 +950,7 @@ users.")
        ("libusb" ,libusb)
        ("qtbase" ,qtbase-5)
        ("qtmultimedia" ,qtmultimedia-5)
-       ("qtserialport" ,qtserialport)))
+       ("qtserialport" ,qtserialport-5)))
     (arguments
      `(#:tests? #f ; No test suite
        #:phases
@@ -1009,7 +1009,7 @@ weak-signal conditions.")
        ("libusb" ,libusb)
        ("qtbase" ,qtbase-5)
        ("qtmultimedia" ,qtmultimedia-5)
-       ("qtserialport" ,qtserialport)))
+       ("qtserialport" ,qtserialport-5)))
     (arguments
      `(#:tests? #f ; No test suite
        #:phases
@@ -1803,7 +1803,7 @@ voice formats.")
        ("qtdeclarative" ,qtdeclarative-5)
        ("qtlocation" ,qtlocation)
        ("qtmultimedia" ,qtmultimedia-5)
-       ("qtserialport" ,qtserialport)
+       ("qtserialport" ,qtserialport-5)
        ("qtspeech" ,qtspeech)
        ("qtwebsockets" ,qtwebsockets-5)
        ("rtl-sdr" ,rtl-sdr)
@@ -1880,7 +1880,7 @@ software-defined radio receivers.")
        `(("qcustomplot" ,qcustomplot)
          ("qtbase" ,qtbase-5)
          ("qtmultimedia" ,qtmultimedia-5)
-         ("qtserialport" ,qtserialport)))
+         ("qtserialport" ,qtserialport-5)))
       (arguments
        `(#:tests? #f  ; No test suite.
          #:phases

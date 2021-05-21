@@ -702,7 +702,7 @@ multipole-accelerated algorithm.")
                        "phoenix.pro")))))))
     (inputs
      `(("qtbase" ,qtbase-5)
-       ("qtserialport" ,qtserialport)
+       ("qtserialport" ,qtserialport-5)
        ("qtsvg" ,qtsvg-5)
        ("libgit2" ,libgit2)
        ("boost" ,boost)

@@ -416,7 +416,7 @@ deconvolution).  Such post-processing is not performed by Stackistry.")
        ("qtlocation" ,qtlocation)
        ("qtmultimedia" ,qtmultimedia-5)
        ("qtscript" ,qtscript)
-       ("qtserialport" ,qtserialport)
+       ("qtserialport" ,qtserialport-5)
        ("zlib" ,zlib)))
     (native-inputs
      `(("gettext" ,gettext-minimal)     ; xgettext is used at compile time
