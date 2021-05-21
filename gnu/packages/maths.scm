@@ -2052,7 +2052,7 @@ script files.")
     (name "octave")
     (inputs
      `(("qscintilla" ,qscintilla)
-       ("qt" ,qtbase)
+       ("qt" ,qtbase-5)
        ,@(package-inputs octave-cli)))
     (native-inputs
      `(("qttools" , qttools) ;for lrelease
@@ -2325,7 +2325,7 @@ ASCII text files using Gmsh's own scripting language.")
        ("python-dbus" ,python-dbus)
        ("python-h5py" ,python-h5py) ;optional, for HDF5 data
        ("python-pyqt" ,python-pyqt)
-       ("qtbase" ,qtbase)
+       ("qtbase" ,qtbase-5)
        ("qtsvg" ,qtsvg)))
     (propagated-inputs
      `(("python-numpy" ,python-numpy)))
@@ -4547,7 +4547,7 @@ evaluates expressions using the standard order of operations.")
                 "0maw5am6rrkyjrprfg113zjq37mqj0iaznkg4h2927ff7wrprc94"))))
     (build-system gnu-build-system)
     (native-inputs `(("gettext" ,gettext-minimal)
-                     ("qtbase" ,qtbase)
+                     ("qtbase" ,qtbase-5)
                      ("qttools" ,qttools)))
     (inputs `(("libx11" ,libx11)
               ("zlib" ,zlib)
@@ -5132,7 +5132,7 @@ reduction.")
      `(("boost" ,boost)
        ("glu" ,glu)
        ("mesa" ,mesa)
-       ("qtbase" ,qtbase)))
+       ("qtbase" ,qtbase-5)))
     (build-system cmake-build-system)
     (synopsis "Toolset for the mCRL2 formal specification language")
     (description
@@ -6063,7 +6063,7 @@ functions.")
        (base32
         "0vh7cd1915bjqzkdp3sk25ngy8cq624mkh8c53c5bnzk357kb0fk"))))
     (build-system cmake-build-system)
-    (inputs `(("qtbase" ,qtbase)))
+    (inputs `(("qtbase" ,qtbase-5)))
     (native-inputs `(("qttools" ,qttools)))
     (arguments
      `(#:phases

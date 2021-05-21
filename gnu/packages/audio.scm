@@ -495,7 +495,7 @@ implementation of Adaptive Multi Rate Narrowband and Wideband
        ("jack" ,jack-1)
        ("ladspa" ,ladspa)
        ("liblo" ,liblo)
-       ("qtbase" ,qtbase)))
+       ("qtbase" ,qtbase-5)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
        ("qttools" ,qttools)))
@@ -2141,7 +2141,7 @@ synchronous execution of all clients, and low latency operation.")
        ("gtk2" ,gtk+-2)
        ("gtk3" ,gtk+)
        ("gtkmm" ,gtkmm-2)
-       ("qtbase" ,qtbase)
+       ("qtbase" ,qtbase-5)
        ("jack" ,jack-1)))
     (native-inputs
      `(("pkg-config" ,pkg-config)))
@@ -2733,7 +2733,7 @@ different audio devices such as ALSA or PulseAudio.")
      `(("jack" ,jack-1)
        ("alsa-lib" ,alsa-lib)
        ("portaudio" ,portaudio)
-       ("qtbase" ,qtbase)
+       ("qtbase" ,qtbase-5)
        ("qtx11extras" ,qtx11extras)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
@@ -2767,11 +2767,11 @@ into various outputs and to start, stop and configure jackd")
                      (string-append "PREFIX="
                                     (assoc-ref outputs "out"))))))))
     (native-inputs
-     `(("qtbase" ,qtbase))) ; for qmake
+     `(("qtbase" ,qtbase-5))) ; for qmake
     (inputs
      `(("jack" ,jack-1)
        ("libsndfile" ,libsndfile)
-       ("qtbase" ,qtbase)))
+       ("qtbase" ,qtbase-5)))
     (home-page "https://sourceforge.net/projects/qjackrcd/")
     (synopsis "Stereo audio recorder for JACK")
     (description "QJackRcd is a simple graphical stereo recorder for JACK
@@ -2880,7 +2880,7 @@ link REQUIRED)"))
        ("boost" ,boost)
        ("boost-sync" ,boost-sync)
        ("yaml-cpp" ,yaml-cpp)
-       ("qtbase" ,qtbase)
+       ("qtbase" ,qtbase-5)
        ("qtdeclarative" ,qtdeclarative)
        ("qtsvg" ,qtsvg)
        ("qtwebchannel" ,qtwebchannel)
@@ -3082,7 +3082,7 @@ the Turtle syntax.")
      `(("lv2" ,lv2)
        ("gtk+" ,gtk+-2)
        ("gtk+" ,gtk+)
-       ("qt" ,qtbase)))
+       ("qt" ,qtbase-5)))
     (native-inputs
      `(("pkg-config" ,pkg-config)))
     (home-page "https://drobilla.net/software/suil/")
@@ -3558,7 +3558,7 @@ interface.")
        ("pkg-config" ,pkg-config)))
     (inputs
      `(("fluidsynth" ,fluidsynth)
-       ("qtbase" ,qtbase)
+       ("qtbase" ,qtbase-5)
        ("qtx11extras" ,qtx11extras)))
     (home-page "https://qsynth.sourceforge.io")
     (synopsis "Graphical user interface for FluidSynth")
@@ -4734,7 +4734,7 @@ as is the case with audio plugins.")
        ;; (ModuleNotFoundError: No module named 'PyQt5')
        ("python-wrapper" ,python-wrapper)
        ("libx11" ,libx11)
-       ("qtbase" ,qtbase)
+       ("qtbase" ,qtbase-5)
        ("zlib" ,zlib)
 
        ;; For WRAP-SCRIPT above.
@@ -5093,7 +5093,7 @@ Rate} 3600x2250 bit/s vocoder used in various radio systems.")
      `(("catch" ,catch-framework)
        ("python" ,python)       ;for running tests
        ("portaudio" ,portaudio) ;for portaudio examples
-       ("qtbase" ,qtbase)       ;for Qt examples
+       ("qtbase" ,qtbase-5)       ;for Qt examples
        ("qtdeclarative" ,qtdeclarative)
        ("qttools" ,qttools)))
     (inputs

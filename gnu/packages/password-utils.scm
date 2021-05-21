@@ -160,7 +160,7 @@ human.")
        ("libxi" ,libxi)
        ("libxtst" ,libxtst)
        ("qrencode" ,qrencode)
-       ("qtbase" ,qtbase)
+       ("qtbase" ,qtbase-5)
        ("qtsvg" ,qtsvg)
        ("qtx11extras" ,qtx11extras)
        ("quazip" ,quazip)               ; XC_KEESHARE
@@ -697,7 +697,7 @@ key URIs using the standard otpauth:// scheme.")
     (native-inputs
      `(("qttools" ,qttools)))
     (inputs
-     `(("qtbase" ,qtbase)
+     `(("qtbase" ,qtbase-5)
        ("qtsvg" ,qtsvg)))
     (home-page "https://qtpass.org")
     (synopsis "GUI for password manager password-store")
