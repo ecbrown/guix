@@ -195,7 +195,7 @@ of categories with some of the activities available in that category.
        ("qtgraphicaleffects" ,qtgraphicaleffects)
        ("qtmultimedia" ,qtmultimedia)
        ("qtquickcontrols" ,qtquickcontrols)
-       ("qtsensors" ,qtsensors)
+       ("qtsensors" ,qtsensors-5)
        ("qtsvg" ,qtsvg-5)
        ("qtxmlpatterns" ,qtxmlpatterns-5)))
     (home-page "https://gcompris.net/index-en.html")
