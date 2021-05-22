@@ -1793,9 +1793,9 @@ implementation of OAuth and OAuth2 authenticathon methods for Qt.")))
     (description "The Qt Network Authorization module provides an
 implementation of OAuth and OAuth2 authenticathon methods for Qt.")))
 
-(define-public qtremoteobjects
+(define-public qtremoteobjects-5
   (package (inherit qtsvg-5)
-    (name "qtremoteobjects")
+    (name "qtremoteobjects-5")
     (version "5.15.2")
     (source (origin
              (method url-fetch)
