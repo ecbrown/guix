@@ -1749,14 +1749,14 @@ web framework, either via the basic or digest authentication schemes.")
 (define-public python-terminado
   (package
     (name "python-terminado")
-    (version "0.9.4")
+    (version "0.10.0")
     (source
      (origin
        (method url-fetch)
        (uri (pypi-uri "terminado" version))
        (sha256
         (base32
-         "1glqyw97rddyzvisz8rihsn3x2nrm5xbyq82nzp3123pqbxvqzcs"))))
+         "1smvra3sc9sg64w49kfn5yhagshq3x55839748ck5dvxvk4hgza6"))))
     (build-system python-build-system)
     (propagated-inputs
      `(("python-tornado" ,python-tornado-6)
@@ -2784,7 +2784,8 @@ supports url redirection and retries, and also gzip and deflate decoding.")
     (license license:expat)))
 
 (define python-urllib3/fixed
-  (package/inherit python-urllib3
+  (package
+    (inherit python-urllib3)
     (version "1.26.4")
     (source
      (origin
@@ -3926,7 +3927,7 @@ for Flask programs that are using @code{python-alembic}.")
 (define-public python-genshi
   (package
     (name "python-genshi")
-    (version "0.7.3")
+    (version "0.7.5")
     (source
      (origin
        (method git-fetch)
@@ -3935,7 +3936,9 @@ for Flask programs that are using @code{python-alembic}.")
              (commit version)))
        (file-name (git-file-name name version))
        (sha256
-        (base32 "04bw7nd4wyn8ixnhik57hny2xpjjpn80k5hp6691inix5gc6rxaf"))))
+        (base32 "04i0caywiwrgw09grz988n15qr9lr31d9n6a529p8v80cy1fv23c"))))
+    (propagated-inputs
+     `(("python-six" ,python-six)))
     (build-system python-build-system)
     (home-page "https://genshi.edgewall.org/")
     (synopsis "Toolkit for generation of output for the web")

@@ -2222,7 +2222,7 @@ human-friendly syntax.")
 (define-public python-scour
   (package
     (name "python-scour")
-    (version "038.1")
+    (version "0.38.2")
     (source
      (origin
        (method git-fetch)
@@ -2233,7 +2233,7 @@ human-friendly syntax.")
           (string-append "v" version))))
        (file-name (git-file-name name version))
        (sha256
-        (base32 "0rgiypb9ig8x4rl3hfzpy7kwnx1q3064nvlrv4fk0dnp84girn0v"))))
+        (base32 "0mmfvx4wqp8gkpv0kbih89zfs9njvmd3v4dxfqii62xddpxq0f1k"))))
     (propagated-inputs
      `(("python-six" ,python-six)))
     (build-system python-build-system)
@@ -6162,13 +6162,13 @@ the OleFileIO module from PIL, the Python Image Library.")
 (define-public python-pikepdf
   (package
     (name "python-pikepdf")
-    (version "2.12.0")
+    (version "2.12.1")
     (source
      (origin
        (method url-fetch)
        (uri (pypi-uri "pikepdf" version))
        (sha256
-        (base32 "1fgk93v5zac38ak00nw94mi44z9701kn20dkdfpwqr3588vnxfzw"))))
+        (base32 "1si1x4dc4i4ghyirjfws1zkgiwk8kypnpp4gf68haascrdy7znqw"))))
     (build-system python-build-system)
     (arguments
      `(#:tests? #false))                ;require python-xmp-toolkit
@@ -7553,9 +7553,6 @@ CLI scripts:
 profile, launches a cluster and returns a view.  On program exit it shuts the
 cluster down and deletes the throwaway profile.")
     (license license:expat)))
-
-(define-public python2-ipython-cluster-helper
-  (package-with-python2 python-ipython-cluster-helper))
 
 (define-public python-traitlets
   (package
@@ -11200,28 +11197,7 @@ convert an @code{.ipynb} notebook file into various static formats including:
     (description
      "The Jupyter HTML notebook is a web-based notebook environment for
 interactive computing.")
-    (properties `((python2-variant . ,(delay python2-notebook))))
     (license license:bsd-3)))
-
-(define-public python2-notebook
-  (let ((base (package-with-python2
-                (strip-python2-variant python-notebook))))
-    (package/inherit base
-      (native-inputs
-       `(("python2-mock" ,python2-mock)
-         ,@(package-native-inputs base)))
-      (arguments
-       (substitute-keyword-arguments (package-arguments base)
-         ((#:phases phases)
-          `(modify-phases ,phases
-             (add-before 'check 'disable-test-case
-              ;; The test requires network access to localhost. Curiously it
-              ;; fails with Python 2 only. Simply make the test-case return
-              ;; immediately.
-              (lambda _
-                (substitute*
-                    "notebook/services/nbconvert/tests/test_nbconvert_api.py"
-                  (("formats = self.nbconvert_api") "return #")))))))))))
 
 (define-public python-widgetsnbextension
   (package
@@ -16859,9 +16835,9 @@ protocols.")
 (define-public python2-attrs-bootstrap
   (package-with-python2 python-attrs-bootstrap))
 
-(define-public python2-cliapp
+(define-public python-cliapp
   (package
-    (name "python2-cliapp")
+    (name "python-cliapp")
     (version "1.20180812.1")
     (source
      (origin
@@ -16874,35 +16850,27 @@ protocols.")
          "1c1jlblbns8qhiaqjpg4xi6lip8xwfc5w643p43rg543havaj45x"))))
     (build-system python-build-system)
     (arguments
-     `(#:python ,python-2
-       #:phases
-       (modify-phases %standard-phases
-         ;; check phase needs to be run before the build phase. If not,
-         ;; coverage-test-runner looks for tests for the built source files,
-         ;; and fails.
-         (delete 'check)
-         (add-before 'build 'check
-           (lambda _
-             ;; Disable python3 tests
-             (substitute* "check"
-               (("python3") "# python3"))
-             (invoke "./check"))))))
+     `(;; XXX: The tests only do style and coverage checks, which
+       ;; fails due to deprecation warnings, etc.
+       #:tests? #f))
     (native-inputs
-     `(("python2-coverage-test-runner" ,python2-coverage-test-runner)
-       ("python2-pep8" ,python2-pep8)))
+     `(("python-coverage-test-runner" ,python-coverage-test-runner)
+       ("python-pep8" ,python-pep8)))
     (propagated-inputs
-     `(("python2-pyaml" ,python2-pyaml)))
+     `(("python-pyaml" ,python-pyaml)))
     (home-page "https://liw.fi/cliapp/")
     (synopsis "Python framework for command line programs")
-    (description "@code{python2-cliapp} is a python framework for
-command line programs.  It contains the typical stuff such programs
-need to do, such as parsing the command line for options, and
-iterating over input files.")
+    (description "@code{cliapp} is a Python framework for command line
+programs.  It contains the typical stuff such programs need to do, such
+as parsing the command line for options, and iterating over input files.")
     (license license:gpl2+)))
 
-(define-public python2-ttystatus
+(define-public python2-cliapp
+  (package-with-python2 python-cliapp))
+
+(define-public python-ttystatus
   (package
-    (name "python2-ttystatus")
+    (name "python-ttystatus")
     (version "0.38")
     (source
      (origin
@@ -16916,11 +16884,10 @@ iterating over input files.")
        (file-name (git-file-name name version))))
     (build-system python-build-system)
     (native-inputs
-     `(("python2-coverage-test-runner" ,python2-coverage-test-runner)
-       ("python2-pep8" ,python2-pep8)))
+     `(("python-coverage-test-runner" ,python-coverage-test-runner)
+       ("python-pep8" ,python-pep8)))
     (arguments
-     `(#:python ,python-2
-       #:phases
+     `(#:phases
        (modify-phases %standard-phases
          ;; check phase needs to be run before the build phase. If not,
          ;; coverage-test-runner looks for tests for the built source files,
@@ -16931,12 +16898,14 @@ iterating over input files.")
     (home-page "https://liw.fi/ttystatus/")
     (synopsis "Python library for showing progress reporting and
 status updates on terminals")
-    (description "@code{python2-ttystatus} is a python library for
-showing progress reporting and status updates on terminals, for
-command line programs.  Output is automatically adapted to the width
-of the terminal: truncated if it does not fit, and resized if the
-terminal size changes.")
+    (description "@code{ttystatus} is a Python library for showing progress
+reporting and status updates on terminals, for command line programs.
+Output is automatically adapted to the width of the terminal: truncated
+if it does not fit, and resized if the terminal size changes.")
     (license license:gpl3+)))
+
+(define-public python2-ttystatus
+  (package-with-python2 python-ttystatus))
 
 (define-public python2-tracing
   (package
