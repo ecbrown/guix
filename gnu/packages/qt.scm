@@ -1477,7 +1477,7 @@ ECMAScript and Qt.")))
 
 (define-public qtquickcontrols-2-5
   (package (inherit qtsvg-5)
-    (name "qtquickcontrols")
+    (name "qtquickcontrols-5")
     (version "5.15.2")
     (source (origin
              (method url-fetch)
@@ -1496,9 +1496,9 @@ ECMAScript and Qt.")))
 applications scriptable.  This module provides a set of extra components that
 can be used to build complete interfaces in Qt Quick.")))
 
-(define-public qtquickcontrols2
+(define-public qtquickcontrols2-5
   (package (inherit qtsvg-5)
-    (name "qtquickcontrols2")
+    (name "qtquickcontrols2-5")
     (version "5.15.2")
     (source (origin
              (method url-fetch)
