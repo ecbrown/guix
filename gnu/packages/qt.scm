@@ -1742,12 +1742,38 @@ customized by using themes or by adding custom items and labels to them.")
     (license license:gpl3)))
 
 (define-public qtnetworkauth
-  (package (inherit qtsvg-5)
+  (package (inherit qtsvg)
     (name "qtnetworkauth")
-    (version "5.15.2")
+    (version "6.1.0")
     (source (origin
              (method url-fetch)
              (uri (qt5-urls name version))
+             (sha256
+              (base32
+               "1lxx3vlc2bzp2a38iq7w0q5v4xgymlaahpn6pmja6ddnwi0sks5s"))))
+    (arguments
+     (substitute-keyword-arguments (package-arguments qtsvg)
+       ((#:phases phases)
+        `(modify-phases ,phases
+           (add-after 'unpack 'remove-failing-test
+             (lambda _
+               ;; These tests can't find their test data.
+               (substitute* "tests/auto/auto.pro"
+                 (("oauth1 ") "# oauth1 "))
+               #t))))))
+    (inputs
+     `(("qtbase" ,qtbase)))
+    (synopsis "Qt Network Authorization module")
+    (description "The Qt Network Authorization module provides an
+implementation of OAuth and OAuth2 authenticathon methods for Qt.")))
+
+(define-public qtnetworkauth-5
+  (package (inherit qtsvg-5)
+    (name "qtnetworkauth-5")
+    (version "5.15.2")
+    (source (origin
+             (method url-fetch)
+             (uri (qt5-urls "qtnetworkauth" version))
              (sha256
               (base32
                "11fdgacv4syr8bff2vdw7rb0dg1gcqpdf37hm3pn31d6z91frhpw"))))

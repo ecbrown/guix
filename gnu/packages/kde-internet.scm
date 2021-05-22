@@ -91,7 +91,7 @@
        ("qca" ,qca)
        ("qoauth" ,qoauth)
        ("qtbase" ,qtbase-5)
-       ("qtnetworkauth" ,qtnetworkauth)
+       ("qtnetworkauth" ,qtnetworkauth-5)
        ("qtwebkit" ,qtwebkit)
        ("sonnet" ,sonnet)))
     (home-page "https://kde.org/applications/internet/org.kde.choqok")
