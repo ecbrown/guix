@@ -1692,13 +1692,38 @@ QGraphicsWidget, or QML types. Users can easily create impressive graphs by
 selecting one of the charts themes.")
     (license license:gpl3)))
 
-(define-public qtdatavis3d
+;;(define-public qtdatavis3d
+;;  (package (inherit qtsvg)
+;;    (name "qtdatavis3d")
+;;    (version "6.1.0")
+;;    (source (origin
+;;             (method url-fetch)
+;;             (uri (qt5-urls name version))
+;;             (sha256
+;;              (base32
+;;               "12rrig0bgrl33gxpvqhgr2fx3gpiv4pfr9cxv3nijfxc55nn93q6"))))
+;;    (arguments
+;;     (substitute-keyword-arguments (package-arguments qtsvg)
+;;       ((#:tests? _ #f) #f))) ; TODO: Enable the tests
+;;    (inputs
+;;     `(("libxkbcommon" ,libxkbcommon)
+;;       ("qtbase" ,qtbase)
+;;       ("qtdeclarative" ,qtdeclarative)))
+;;    (synopsis "Qt Data Visualization module")
+;;    (description "The Qt Data Visualization module provides a way to visualize
+;;data in 3D as bar, scatter, and surface graphs. It is especially useful for
+;;visualizing depth maps and large quantities of rapidly changing data, such as
+;;data received from multiple sensors. The look and feel of graphs can be
+;;customized by using themes or by adding custom items and labels to them.")
+;;    (license license:gpl3)))
+
+(define-public qtdatavis3d-5
   (package (inherit qtsvg-5)
-    (name "qtdatavis3d")
+    (name "qtdatavis3d-5")
     (version "5.15.2")
     (source (origin
              (method url-fetch)
-             (uri (qt5-urls name version))
+             (uri (qt5-urls "qtdatavis3d" version))
              (sha256
               (base32
                "1zdn3vm0nfy9ny7c783aabp3mhlnqhi9fw2rljn7ibbksmsnasi2"))))
@@ -3110,7 +3135,7 @@ color-related widgets.")
        ("libxslt" ,libxslt)
        ("clang-toolchain" ,clang-toolchain)
        ("qtbase" ,qtbase-5)
-       ("qtdatavis3d" ,qtdatavis3d)
+       ("qtdatavis3d" ,qtdatavis3d-5)
        ("qtlocation" ,qtlocation-5)
        ("qtmultimedia" ,qtmultimedia-5)
        ("qtquickcontrols" ,qtquickcontrols)
