@@ -1542,9 +1542,9 @@ components.  The API consists of over 20 effects provided as separate QML
 types.  The effects cover functional areas such as blending, masking, blurring,
 coloring, and many more.")))
 
-(define-public qtgamepad
+(define-public qtgamepad-5
   (package (inherit qtsvg-5)
-    (name "qtgamepad")
+    (name "qtgamepad-5")
     (version "5.15.2")
     (source (origin
              (method url-fetch)
