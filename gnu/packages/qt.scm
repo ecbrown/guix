@@ -1627,9 +1627,9 @@ machines (loading the SCXML file and instantiating states and transitions) and
 generating a C++ file that has a class implementing the state machine.  It
 also contains functionality to support data models and executable content.")))
 
-(define-public qtpurchasing
+(define-public qtpurchasing-5
   (package (inherit qtsvg-5)
-    (name "qtpurchasing")
+    (name "qtpurchasing-5")
     (version "5.15.2")
     (source (origin
              (method url-fetch)
