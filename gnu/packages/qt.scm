@@ -1645,12 +1645,36 @@ also contains functionality to support data models and executable content.")))
 purchasing goods and services.")))
 
 (define-public qtcharts
-  (package (inherit qtsvg-5)
+  (package (inherit qtsvg)
     (name "qtcharts")
-    (version "5.15.2")
+    (version "6.1.0")
     (source (origin
              (method url-fetch)
              (uri (qt5-urls name version))
+             (sha256
+              (base32
+               "1kfzrnaihp674nbhayf4pg8g69ggbhcb8z90ry8yv7pjndadqw4g"))))
+    (arguments
+     (substitute-keyword-arguments (package-arguments qtsvg)
+       ((#:tests? _ #f) #f))) ; TODO: Enable the tests
+    (inputs
+     `(("qtbase" ,qtbase)
+       ("qtdeclarative" ,qtdeclarative)))
+    (synopsis "Qt Charts module")
+    (description "The Qt Charts module provides a set of easy to use chart
+components.  It uses the Qt Graphics View Framework, therefore charts can be
+easily integrated to modern user interfaces.  Qt Charts can be used as QWidgets,
+QGraphicsWidget, or QML types. Users can easily create impressive graphs by
+selecting one of the charts themes.")
+    (license license:gpl3)))
+
+(define-public qtcharts-5
+  (package (inherit qtsvg-5)
+    (name "qtcharts-5")
+    (version "5.15.2")
+    (source (origin
+             (method url-fetch)
+             (uri (qt5-urls "qtcharts" version))
              (sha256
               (base32
                "049x7z8zcp9jixmdv2fjscy2ggpd6za9hkdbb2bqp2mxjm0hwxg0"))))

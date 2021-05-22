@@ -1194,7 +1194,7 @@ or Bonjour by other projects).")
        ))
     (inputs
      `(("qtbase" ,qtbase-5)
-       ("qtcharts" ,qtcharts)
+       ("qtcharts" ,qtcharts-5)
        ("qtdeclarative" ,qtdeclarative-5)
        ("qtsvg" ,qtsvg-5)))
     (arguments
