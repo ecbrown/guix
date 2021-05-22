@@ -2385,7 +2385,7 @@ There is support for:
        ("qtbase" ,qtbase-5)
        ("qtdeclarative" ,qtdeclarative-5)
        ("qtmultimedia" ,qtmultimedia-5)
-       ("qtquickcontrols" ,qtquickcontrols)
+       ("qtquickcontrols" ,qtquickcontrols-5)
        ("qtquickcontrols2" ,qtquickcontrols2-5)
        ("qtsvg" ,qtsvg-5)
        ("qttools" ,qttools-5)

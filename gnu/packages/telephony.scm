@@ -707,7 +707,7 @@ Mumble consists of two applications for separate usage:
        ("libxml2" ,libxml2)
        ("qtbase" ,qtbase-5)
        ("qtdeclarative" ,qtdeclarative-5)
-       ("qtquickcontrols" ,qtquickcontrols)
+       ("qtquickcontrols" ,qtquickcontrols-5)
        ("readline" ,readline)
        ("speex" ,speex)
        ("speexdsp" ,speexdsp)

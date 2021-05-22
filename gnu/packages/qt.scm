@@ -1392,7 +1392,7 @@ native APIs where it makes sense.")))
     (native-inputs
      `(("perl" ,perl)
        ("qtdeclarative" ,qtdeclarative-5)
-       ("qtquickcontrols" ,qtquickcontrols)
+       ("qtquickcontrols" ,qtquickcontrols2-5)
        ("qtserialport" ,qtserialport-5)))
     (inputs
      `(("icu4c" ,icu4c)
@@ -1475,7 +1475,7 @@ that helps in Qt development.")))
 The following guides and references cover aspects of programming with
 ECMAScript and Qt.")))
 
-(define-public qtquickcontrols-2-5
+(define-public qtquickcontrols-5
   (package (inherit qtsvg-5)
     (name "qtquickcontrols-5")
     (version "5.15.2")
@@ -1502,7 +1502,7 @@ can be used to build complete interfaces in Qt Quick.")))
     (version "5.15.2")
     (source (origin
              (method url-fetch)
-             (uri (qt5-urls name version))
+             (uri (qt5-urls "qtquickcontrols2" version))
              (sha256
               (base32
                "06c9vrwvbjmzapmfa25y34lgjkzg57xxbm92nr6wkv5qykjnq6v7"))))
@@ -3164,7 +3164,7 @@ color-related widgets.")
        ("qtdatavis3d" ,qtdatavis3d-5)
        ("qtlocation" ,qtlocation-5)
        ("qtmultimedia" ,qtmultimedia-5)
-       ("qtquickcontrols" ,qtquickcontrols)
+       ("qtquickcontrols" ,qtquickcontrols-5)
        ("qtscript" ,qtscript-5)
        ("qtscxml" ,qtscxml-5)
        ("qtsensors" ,qtsensors-5)

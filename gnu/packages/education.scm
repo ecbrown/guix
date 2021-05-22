@@ -194,7 +194,7 @@ of categories with some of the activities available in that category.
        ("qtdeclarative" ,qtdeclarative-5)
        ("qtgraphicaleffects" ,qtgraphicaleffects-5)
        ("qtmultimedia" ,qtmultimedia-5)
-       ("qtquickcontrols" ,qtquickcontrols)
+       ("qtquickcontrols" ,qtquickcontrols-5)
        ("qtsensors" ,qtsensors-5)
        ("qtsvg" ,qtsvg-5)
        ("qtxmlpatterns" ,qtxmlpatterns-5)))

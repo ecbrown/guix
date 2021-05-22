@@ -87,7 +87,7 @@
        ;; QtQuick & co. here; they end up in QML2_IMPORT_PATH thanks to
        ;; 'wrap-qt-program'.
        ("qtgraphicaleffects" ,qtgraphicaleffects-5)
-       ("qtquickcontrols" ,qtquickcontrols)
+       ("qtquickcontrols" ,qtquickcontrols-5)
        ("qtquickcontrols2" ,qtquickcontrols2-5)
        ("qtsvg" ,qtsvg-5)
 

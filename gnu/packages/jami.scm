@@ -607,7 +607,7 @@ decentralized calling using P2P-DHT.")
        ("qtmultimedia" ,qtmultimedia-5)
        ("qtdeclarative" ,qtdeclarative-5)
        ("qtgraphicaleffects" ,qtgraphicaleffects-5)
-       ("qtquickcontrols" ,qtquickcontrols)
+       ("qtquickcontrols" ,qtquickcontrols-5)
        ("qtquickcontrols2" ,qtquickcontrols2-5)))
     (propagated-inputs
      `(("libring" ,libring)))           ;for dring

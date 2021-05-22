@@ -648,7 +648,7 @@ embedded kernel situations.")
        `(("qtbase" ,qtbase-5)
          ("qtdeclarative" ,qtdeclarative-5)
          ("qtgraphicaleffects" ,qtgraphicaleffects-5)
-         ("qtquickcontrols" ,qtquickcontrols)))
+         ("qtquickcontrols" ,qtquickcontrols-5)))
       (arguments
        `(#:phases
          (modify-phases %standard-phases
