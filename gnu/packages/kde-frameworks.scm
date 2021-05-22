@@ -894,7 +894,7 @@ or user activity.")
        ("qtquickcontrols2" ,qtquickcontrols2-5)
        ("qtsvg" ,qtsvg-5)
        ;; Run-time dependency
-       ("qtgraphicaleffects" ,qtgraphicaleffects)))
+       ("qtgraphicaleffects" ,qtgraphicaleffects-5)))
     (home-page "https://community.kde.org/Frameworks")
     (synopsis "QtQuick components for mobile user interfaces")
     (description "Kirigami is a set of high level QtQuick components looking

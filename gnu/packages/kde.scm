@@ -266,7 +266,7 @@ browser for easy news reading.")
          ("breeze-icons" ,breeze-icons) ; recommended icon set
          ("purpose" ,purpose)
          ("qtwebkit" ,qtwebkit)
-         ("qtgraphicaleffects" ,qtgraphicaleffects)
+         ("qtgraphicaleffects" ,qtgraphicaleffects-5)
          ("kplotting" ,kplotting)))
       (arguments
        `(#:tests? #f                    ;TODO needs X
@@ -750,7 +750,7 @@ different notification systems.")
        ("qca" ,qca)
        ("qtbase" ,qtbase-5)
        ("qtdeclarative" ,qtdeclarative-5)
-       ("qtgraphicaleffects" ,qtgraphicaleffects)
+       ("qtgraphicaleffects" ,qtgraphicaleffects-5)
        ("qtmultimedia" ,qtmultimedia-5)
        ("qtquickcontrols" ,qtquickcontrols)
        ("qtquickcontrols2" ,qtquickcontrols2-5)

@@ -194,7 +194,7 @@
        ("python-nautilus" ,python-nautilus)
        ("qtbase" ,qtbase-5)
        ("qtdeclarative" ,qtdeclarative-5)
-       ("qtgraphicaleffects" ,qtgraphicaleffects)
+       ("qtgraphicaleffects" ,qtgraphicaleffects-5)
        ("qtkeychain" ,qtkeychain)
        ("qtquickcontrols2" ,qtquickcontrols2-5)
        ("qtsolutions" ,qtsolutions)

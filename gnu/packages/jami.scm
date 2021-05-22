@@ -606,7 +606,7 @@ decentralized calling using P2P-DHT.")
        ("qtwebchannel" ,qtwebchannel-5)
        ("qtmultimedia" ,qtmultimedia-5)
        ("qtdeclarative" ,qtdeclarative-5)
-       ("qtgraphicaleffects" ,qtgraphicaleffects)
+       ("qtgraphicaleffects" ,qtgraphicaleffects-5)
        ("qtquickcontrols" ,qtquickcontrols)
        ("qtquickcontrols2" ,qtquickcontrols2-5)))
     (propagated-inputs

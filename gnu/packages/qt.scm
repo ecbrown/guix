@@ -1518,9 +1518,9 @@ module that provides platform integration: native dialogs, menus and menu bars,
 and tray icons.  It falls back to Qt Widgets when a native implementation is
 not available.")))
 
-(define-public qtgraphicaleffects
+(define-public qtgraphicaleffects-5
   (package (inherit qtsvg-5)
-    (name "qtgraphicaleffects")
+    (name "qtgraphicaleffects-5")
     (version "5.15.2")
     (source (origin
              (method url-fetch)

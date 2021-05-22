@@ -1567,7 +1567,7 @@ receiver.")
        ("qtbase" ,qtbase-5)
        ("qtcharts" ,qtcharts)
        ("qtdeclarative" ,qtdeclarative-5)
-       ("qtgraphicaleffects" ,qtgraphicaleffects)
+       ("qtgraphicaleffects" ,qtgraphicaleffects-5)
        ("qtmultimedia" ,qtmultimedia-5)
        ("qtquickcontrols2" ,qtquickcontrols2-5)))
     (arguments

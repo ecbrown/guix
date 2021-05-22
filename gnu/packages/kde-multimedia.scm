@@ -171,7 +171,7 @@ This package is part of the KDE multimedia module.")
        ("phonon" ,phonon)
        ("qtbase" ,qtbase-5)
        ("qtdeclarative" ,qtdeclarative-5)
-       ("qtgraphicaleffects" ,qtgraphicaleffects) ; not listed as dependency
+       ("qtgraphicaleffects" ,qtgraphicaleffects-5) ; not listed as dependency
        ("qtmultimedia" ,qtmultimedia-5)
        ("qtquickcontrols" ,qtquickcontrols)
        ("qtquickcontrols2" ,qtquickcontrols2-5)
@@ -470,7 +470,7 @@ autoloading of subtitle files for use while playing video.")
        ("purpose" ,purpose)
        ("qtbase" ,qtbase-5)
        ("qtdeclarative" ,qtdeclarative-5)
-       ("qtgraphicaleffects" ,qtgraphicaleffects)
+       ("qtgraphicaleffects" ,qtgraphicaleffects-5)
        ("qtquickcontrols" ,qtquickcontrols)
        ("qtquickcontrols2" ,qtquickcontrols2-5) ; not listed as dependency
        ("qtx11extras" ,qtx11extras-5)))

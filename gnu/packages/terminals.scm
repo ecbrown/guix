@@ -647,7 +647,7 @@ embedded kernel situations.")
       (inputs
        `(("qtbase" ,qtbase-5)
          ("qtdeclarative" ,qtdeclarative-5)
-         ("qtgraphicaleffects" ,qtgraphicaleffects)
+         ("qtgraphicaleffects" ,qtgraphicaleffects-5)
          ("qtquickcontrols" ,qtquickcontrols)))
       (arguments
        `(#:phases
