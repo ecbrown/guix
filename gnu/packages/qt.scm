@@ -1570,12 +1570,42 @@ primary target audience are embedded devices with fullscreen user interfaces,
 and mobile applications targeting TV-like form factors.")))
 
 (define-public qtscxml
-  (package (inherit qtsvg-5)
+  (package (inherit qtsvg)
     (name "qtscxml")
-    (version "5.15.2")
+    (version "6.1.0")
     (source (origin
              (method url-fetch)
              (uri (qt5-urls name version))
+             (sha256
+              (base32
+               "1sk3qcby547rv6bai2j2zd3ydg3aa7p48is68kh72h8r5sf80df8"))
+             (modules '((guix build utils)))
+;;             (snippet
+;;              '(begin
+;;                 (delete-file-recursively "tests/3rdparty")
+;;                 ;; the scion test refers to the bundled 3rd party test code.
+;;                 (substitute* "tests/auto/auto.pro"
+;;                   (("scion") "#"))
+;;                 #t))
+             ))
+    (inputs
+     `(("libxkbcommon" ,libxkbcommon)
+       ("qtbase" ,qtbase)
+       ("qtdeclarative" ,qtdeclarative)))
+    (synopsis "Qt SCXML module")
+    (description "The Qt SCXML module provides functionality to create state
+machines from SCXML files.  This includes both dynamically creating state
+machines (loading the SCXML file and instantiating states and transitions) and
+generating a C++ file that has a class implementing the state machine.  It
+also contains functionality to support data models and executable content.")))
+
+(define-public qtscxml-5
+  (package (inherit qtsvg-5)
+    (name "qtscxml-5")
+    (version "5.15.2")
+    (source (origin
+             (method url-fetch)
+             (uri (qt5-urls "qtscxml" version))
              (sha256
               (base32
                "1p5771b9hnpchfcdgy0zkhwg09a6xq88934aggp0rij1k85mkfb0"))
@@ -3061,7 +3091,7 @@ color-related widgets.")
        ("qtmultimedia" ,qtmultimedia-5)
        ("qtquickcontrols" ,qtquickcontrols)
        ("qtscript" ,qtscript-5)
-       ("qtscxml" ,qtscxml)
+       ("qtscxml" ,qtscxml-5)
        ("qtsensors" ,qtsensors-5)
        ("qtspeech" ,qtspeech)
        ("qtsvg" ,qtsvg-5)
