@@ -1898,7 +1898,7 @@ asynchronous jobs.")
        ("kwindowsystem" ,kwindowsystem)
        ("phonon" ,phonon)
        ("qtbase" ,qtbase-5)
-       ("qtspeech" ,qtspeech)
+       ("qtspeech" ,qtspeech-5)
        ;; TODO: Think about adding dbusmenu-qt5 from
        ;; https://launchpad.net/libdbusmenu-qt
        ("qtx11extras" ,qtx11extras-5)))
@@ -3263,7 +3263,7 @@ library.")
        ("kwidgetsaddons" ,kwidgetsaddons)
        ("kwindowsystem" ,kwindowsystem)
        ("qtbase" ,qtbase-5)
-       ("qtspeech" ,qtspeech)))
+       ("qtspeech" ,qtspeech-5)))
     (home-page "https://community.kde.org/Frameworks")
     (synopsis "Text editing widgets")
     (description "KTextWidgets provides widgets for displaying and editing text.

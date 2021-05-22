@@ -11916,7 +11916,7 @@ and chess engines.")
     (inputs
      `(("qtbase" ,qtbase-5)
        ("qtmultimedia" ,qtmultimedia-5)
-       ("qtspeech" ,qtspeech)
+       ("qtspeech" ,qtspeech-5)
        ("qtsvg" ,qtsvg-5)
        ("zlib" ,zlib)))
     (arguments

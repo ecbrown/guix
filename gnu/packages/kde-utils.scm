@@ -197,7 +197,7 @@ whom pressing buttons hurts.")
        ("kxmlgui" ,kxmlgui)
        ("oxygen-icons" ,oxygen-icons) ;; default icon set
        ("qtbase" ,qtbase-5)
-       ("qtspeech" ,qtspeech)))
+       ("qtspeech" ,qtspeech-5)))
     (home-page "https://kde.org/applications/utilities/org.kde.kmouth")
     (synopsis "Type-and-say frontend for speech synthesizers")
     (description "KMouth is a program which enables persons that cannot speak

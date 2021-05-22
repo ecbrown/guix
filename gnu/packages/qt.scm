@@ -1827,9 +1827,9 @@ communication} (IPC) module developed for Qt.  The idea is to extend existing
 Qt's functionalities to enable an easy exchange of information between
 processes or computers.")))
 
-(define-public qtspeech
+(define-public qtspeech-5
   (package (inherit qtsvg-5)
-    (name "qtspeech")
+    (name "qtspeech-5")
     (version "5.15.2")
     (source (origin
              (method url-fetch)
@@ -3168,7 +3168,7 @@ color-related widgets.")
        ("qtscript" ,qtscript-5)
        ("qtscxml" ,qtscxml-5)
        ("qtsensors" ,qtsensors-5)
-       ("qtspeech" ,qtspeech)
+       ("qtspeech" ,qtspeech-5)
        ("qtsvg" ,qtsvg-5)
        ("qtwebchannel" ,qtwebchannel-5)
        ("qtwebsockets" ,qtwebsockets-5)
