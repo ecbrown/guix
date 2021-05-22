@@ -2886,7 +2886,7 @@ link REQUIRED)"))
        ("qtwebchannel" ,qtwebchannel-5)
        ("qtwebsockets" ,qtwebsockets-5)))
     (propagated-inputs                  ;to get native-search-path
-     `(("qtwebengine" ,qtwebengine)))
+     `(("qtwebengine" ,qtwebengine-5)))
     (home-page "https://github.com/supercollider/supercollider")
     (synopsis "Synthesis engine and programming language")
     (description "SuperCollider is a synthesis engine (@code{scsynth} or

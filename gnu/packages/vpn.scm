@@ -340,7 +340,7 @@ and probably others.")
        ("python-pyxdg" ,python-pyxdg)
        ("python-structlog" ,python-structlog)
        ("python-toml" ,python-toml)
-       ("qtwebengine" ,qtwebengine)))
+       ("qtwebengine" ,qtwebengine-5)))
     (native-inputs
      `(("python-pytest" ,python-pytest)
        ("python-setuptools-scm" ,python-setuptools-scm)))

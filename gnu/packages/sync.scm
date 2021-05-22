@@ -206,7 +206,7 @@
        ("xdg-utils" ,xdg-utils)
        ("zlib" ,zlib)))
     (propagated-inputs
-     `(("qtwebengine" ,qtwebengine)))
+     `(("qtwebengine" ,qtwebengine-5)))
     (synopsis "Desktop sync client for Nextcloud")
     (description "Nextcloud-Desktop is a tool to synchronize files from
 Nextcloud Server with your computer.")

@@ -2726,7 +2726,7 @@ as phones, embedded computers or microcontrollers.")
          ("qtdeclarative" ,qtdeclarative-5)
          ("qtwebchannel" ,qtwebchannel-5)))
       (propagated-inputs
-       `(("qtwebengine" ,qtwebengine)))
+       `(("qtwebengine" ,qtwebengine-5)))
       (home-page "https://movim.eu/")
       (synopsis "Desktop Application for Movim")
       (description

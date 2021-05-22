@@ -197,7 +197,7 @@ with Microsoft Compiled HTML (CHM) files")
        ("python-regex" ,python-regex)
        ("python-speechd" ,speech-dispatcher)
        ("python-zeroconf" ,python-zeroconf)
-       ("qtwebengine" ,qtwebengine)
+       ("qtwebengine" ,qtwebengine-5)
        ("sqlite" ,sqlite)))
     (arguments
      `(;; Calibre is using setuptools by itself, but the setup.py is not

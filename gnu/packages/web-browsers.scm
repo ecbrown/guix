@@ -510,7 +510,7 @@ interface.")
        ("python-pyqt" ,python-pyqt)
        ;; While qtwebengine is provided by python-pyqtwebengine, it's
        ;; included here so we can wrap QTWEBENGINEPROCESS_PATH.
-       ("qtwebengine" ,qtwebengine)))
+       ("qtwebengine" ,qtwebengine-5)))
     (arguments
      `(;; FIXME: With the existance of qtwebengine, tests can now run.  But
        ;; they are still disabled because test phase hangs.  It's not readily

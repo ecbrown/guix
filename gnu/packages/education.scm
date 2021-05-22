@@ -786,7 +786,7 @@ adjust the level of difficulty.")
                (for-each (lambda (program)
                            (wrap-program program
                              `("QTWEBENGINEPROCESS_PATH" =
-                               (,qtwebengineprocess))
+                               (,qtwebengine-5process))
                              `("PATH" prefix (,(string-append
                                                 (assoc-ref inputs "mpv")
                                                 "/bin")))
@@ -813,7 +813,7 @@ adjust the level of difficulty.")
        ("python-sip" ,python-sip)
        ;; `qtwebengine' is included in `pyqtwebengine', included here for easy
        ;; wrapping.
-       ("qtwebengine" ,qtwebengine)))
+       ("qtwebengine" ,qtwebengine-5)))
     (home-page "https://apps.ankiweb.net/")
     (synopsis "Powerful, intelligent flash cards")
     (description "Anki is a program which makes remembering things

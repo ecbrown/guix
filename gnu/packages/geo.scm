@@ -1667,7 +1667,7 @@ using the dataset of topographical information collected by
        ("qtdeclarative" ,qtdeclarative-5)
        ("qtlocation" ,qtlocation-5)
        ("qtwebchannel" ,qtwebchannel-5)
-       ("qtwebengine" ,qtwebengine)
+       ("qtwebengine" ,qtwebengine-5)
        ("quazip" ,quazip)
        ("routino" ,routino)
        ("sqlite" ,sqlite)                      ; See wrap phase
@@ -1701,7 +1701,7 @@ using the dataset of topographical information collected by
                (for-each (lambda (program)
                            (wrap-program program
                              `("QTWEBENGINEPROCESS_PATH" =
-                               (,qtwebengineprocess))))
+                               (,qtwebengine-5process))))
                          (find-files bin ".*")))
              #t)))))
     (synopsis "GPS mapping application")

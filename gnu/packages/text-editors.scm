@@ -624,7 +624,7 @@ scripts/input/X11/C/Shell/HTML/Dired): 49KB.
        ("qtsvg" ,qtsvg-5)
        ("qtwebchannel" ,qtwebchannel-5)))
     (propagated-inputs                  ; To get native-search-path
-     `(("qtwebengine" ,qtwebengine)))
+     `(("qtwebengine" ,qtwebengine-5)))
     (arguments
      `(#:phases
        (modify-phases %standard-phases

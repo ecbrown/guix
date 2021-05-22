@@ -744,7 +744,7 @@ for KDE PIM.")
        ("qtnetworkauth" ,qtnetworkauth-5)
        ("qtspeech" ,qtspeech-5)
        ("qtwebchannel" ,qtwebchannel-5)
-       ("qtwebengine" ,qtwebengine)
+       ("qtwebengine" ,qtwebengine-5)
        ("qtxmlpatterns" ,qtxmlpatterns-5)))
     (arguments
       ;; TODO: 5/45 tests fail for quite different reasons, even with
@@ -1099,7 +1099,7 @@ and retrieving certificates from LDAP servers.")
        ("qtbase" ,qtbase-5)
        ("qtdeclarative" ,qtdeclarative-5)
        ("qtwebchannel" ,qtwebchannel-5)
-       ("qtwebengine" ,qtwebengine)
+       ("qtwebengine" ,qtwebengine-5)
        ("sonnet" ,sonnet)))
     (arguments
      `(#:phases
@@ -1358,7 +1358,7 @@ using a Qt/KMime C++ API.")
        ("qtbase" ,qtbase-5)
        ("qtdeclarative" ,qtdeclarative-5)
        ("qtwebchannel" ,qtwebchannel-5)
-       ("qtwebengine" ,qtwebengine)
+       ("qtwebengine" ,qtwebengine-5)
        ("qtwebkit" ,qtwebkit)
        ("sonnet" ,sonnet)))
     (arguments
@@ -1698,7 +1698,7 @@ Virtual Contact File}) files to the KPeople contact management library.")
        ("libxslt" ,libxslt)
        ("purpose" ,purpose)
        ("qtbase" ,qtbase-5)
-       ("qtwebengine" ,qtwebengine)))
+       ("qtwebengine" ,qtwebengine-5)))
     (arguments
      `(#:tests? #f)) ;; TODO tests hang
     (home-page "https://invent.kde.org/pim/pimcommon")
@@ -1895,7 +1895,7 @@ and allows one to view/extract message formatted text in Rich Text Format.")
        ("qtbase" ,qtbase-5)
        ("qtdeclarative" ,qtdeclarative-5)
        ("qtwebchannel" ,qtwebchannel-5)
-       ("qtwebengine" ,qtwebengine)))
+       ("qtwebengine" ,qtwebengine-5)))
     (arguments
      `(#:tests? #f)) ;; TODO 6/48 tests fail
     (home-page "https://invent.kde.org/pim/libkgapi")
@@ -1981,7 +1981,7 @@ KDE using certificate-based crypto.")
        ("qtbase" ,qtbase-5)
        ("qtdeclarative" ,qtdeclarative-5)
        ("qtwebchannel" ,qtwebchannel-5)
-       ("qtwebengine" ,qtwebengine)))
+       ("qtwebengine" ,qtwebengine-5)))
     (arguments
      `(#:phases
        (modify-phases %standard-phases

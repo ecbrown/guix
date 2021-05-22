@@ -1496,6 +1496,28 @@ ECMAScript and Qt.")))
 applications scriptable.  This module provides a set of extra components that
 can be used to build complete interfaces in Qt Quick.")))
 
+(define-public qtquickcontrols2
+  (package (inherit qtsvg)
+    (name "qtquickcontrols2")
+    (version "6.1.0")
+    (source (origin
+             (method url-fetch)
+             (uri (qt5-urls "qtquickcontrols2" version))
+             (sha256
+              (base32
+               "0nbxjp1plh6qpbb6cmkz6nyh2a77hmni2shjbc4rzxadwxwiskvq"))))
+    (arguments
+     (substitute-keyword-arguments (package-arguments qtsvg)
+       ((#:tests? _ #f) #f))) ; TODO: Enable the tests
+    (inputs
+     `(("qtbase" ,qtbase)
+       ("qtdeclarative" ,qtdeclarative)))
+    (synopsis "Qt Quick Controls 2 and other Quick 2 modules")
+    (description "The Qt Quick Controls 2 module contains the Qt Labs Platform
+module that provides platform integration: native dialogs, menus and menu bars,
+and tray icons.  It falls back to Qt Widgets when a native implementation is
+not available.")))
+
 (define-public qtquickcontrols2-5
   (package (inherit qtsvg-5)
     (name "qtquickcontrols2-5")
@@ -1887,15 +1909,15 @@ using the Enchant spell-checking library.")
     ;; COPYING file specify GPL3, but source code files all refer to GPL2+.
     (license license:gpl2+)))
 
-(define-public qtwebengine
+(define-public qtwebengine-5
   (package
     (inherit qtsvg-5)
-    (name "qtwebengine")
+    (name "qtwebengine-5")
     (version (package-version qtbase))
     (source
      (origin
        (method url-fetch)
-       (uri (qt5-urls name version))
+       (uri (qt5-urls "qtwebengine" version))
        (sha256
         (base32
          "1q4idxdm81sx102xc12ixj0xpfx52d6vwvs3jpapnkyq8c7cmby8"))
@@ -2462,7 +2484,7 @@ contain over 620 classes.")
        ("qtsvg" ,qtsvg-5)
        ("qtdeclarative" ,qtdeclarative-5)
        ("qtwebchannel" ,qtwebchannel-5)
-       ("qtwebengine" ,qtwebengine)))
+       ("qtwebengine" ,qtwebengine-5)))
     (arguments
      `(#:modules ((srfi srfi-1)
                   ((guix build python-build-system) #:select (python-version))
