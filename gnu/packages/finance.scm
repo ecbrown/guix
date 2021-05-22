@@ -777,7 +777,7 @@ the Monero command line client and daemon.")
        ("qtdeclarative" ,qtdeclarative-5)
        ("qtgraphicaleffects" ,qtgraphicaleffects)
        ("qtquickcontrols" ,qtquickcontrols)
-       ("qtquickcontrols2",qtquickcontrols2)
+       ("qtquickcontrols2",qtquickcontrols2-5)
        ("qtsvg" ,qtsvg-5)
        ("qtxmlpatterns" ,qtxmlpatterns-5)))
     (arguments

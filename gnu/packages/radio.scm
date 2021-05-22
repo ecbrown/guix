@@ -1569,7 +1569,7 @@ receiver.")
        ("qtdeclarative" ,qtdeclarative-5)
        ("qtgraphicaleffects" ,qtgraphicaleffects)
        ("qtmultimedia" ,qtmultimedia-5)
-       ("qtquickcontrols2" ,qtquickcontrols2)))
+       ("qtquickcontrols2" ,qtquickcontrols2-5)))
     (arguments
      `(#:configure-flags '("-DRTLSDR=ON")
        #:tests? #f))

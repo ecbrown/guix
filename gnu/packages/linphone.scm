@@ -864,7 +864,7 @@ and video calls or instant messaging capabilities to an application.")
        ("qtdeclarative" ,qtdeclarative-5)
        ("qtgraphicaleffects" ,qtgraphicaleffects)
        ("qtquickcontrols" ,qtquickcontrols)
-       ("qtquickcontrols2" ,qtquickcontrols2)
+       ("qtquickcontrols2" ,qtquickcontrols2-5)
        ("qtsvg" ,qtsvg-5)))
     (synopsis "Desktop client for the Linphone SIP softphone")
     (description "Linphone is a SIP softphone for voice and video over IP calling

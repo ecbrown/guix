@@ -88,7 +88,7 @@
        ;; 'wrap-qt-program'.
        ("qtgraphicaleffects" ,qtgraphicaleffects)
        ("qtquickcontrols" ,qtquickcontrols)
-       ("qtquickcontrols2" ,qtquickcontrols2)
+       ("qtquickcontrols2" ,qtquickcontrols2-5)
        ("qtsvg" ,qtsvg-5)
 
        ("shadow" ,shadow)

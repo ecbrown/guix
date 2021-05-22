@@ -608,7 +608,7 @@ decentralized calling using P2P-DHT.")
        ("qtdeclarative" ,qtdeclarative-5)
        ("qtgraphicaleffects" ,qtgraphicaleffects)
        ("qtquickcontrols" ,qtquickcontrols)
-       ("qtquickcontrols2" ,qtquickcontrols2)))
+       ("qtquickcontrols2" ,qtquickcontrols2-5)))
     (propagated-inputs
      `(("libring" ,libring)))           ;for dring
     (home-page "https://jami.net")

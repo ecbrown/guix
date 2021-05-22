@@ -196,7 +196,7 @@
        ("qtdeclarative" ,qtdeclarative-5)
        ("qtgraphicaleffects" ,qtgraphicaleffects)
        ("qtkeychain" ,qtkeychain)
-       ("qtquickcontrols2" ,qtquickcontrols2)
+       ("qtquickcontrols2" ,qtquickcontrols2-5)
        ("qtsolutions" ,qtsolutions)
        ("qtsvg" ,qtsvg-5)
        ("qtwebchannel" ,qtwebchannel-5)

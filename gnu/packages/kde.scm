@@ -260,7 +260,7 @@ browser for easy news reading.")
          ("kdeclarative" ,kdeclarative)
          ("qtdeclarative" ,qtdeclarative-5)
          ("qtquickcontrols" ,qtquickcontrols)
-         ("qtquickcontrols2" ,qtquickcontrols2)
+         ("qtquickcontrols2" ,qtquickcontrols2-5)
          ("kiconthemes" ,kiconthemes)
          ("breeze" ,breeze) ; make dark them available easily
          ("breeze-icons" ,breeze-icons) ; recommended icon set
@@ -353,7 +353,7 @@ projects.")
        ("qtbase" ,qtbase-5)
        ("qtdeclarative" ,qtdeclarative-5)
        ("qtquickcontrols" ,qtquickcontrols)  ;; not checked as requirement
-       ("qtquickcontrols2" ,qtquickcontrols2)  ;; not checked as requirement
+       ("qtquickcontrols2" ,qtquickcontrols2-5)  ;; not checked as requirement
        ("qtwebkit" ,qtwebkit)
        ("threadweaver" ,threadweaver)
 
@@ -753,7 +753,7 @@ different notification systems.")
        ("qtgraphicaleffects" ,qtgraphicaleffects)
        ("qtmultimedia" ,qtmultimedia-5)
        ("qtquickcontrols" ,qtquickcontrols)
-       ("qtquickcontrols2" ,qtquickcontrols2)
+       ("qtquickcontrols2" ,qtquickcontrols2-5)
        ("qtwayland" ,qtwayland-5)
        ("qtx11extras" ,qtx11extras-5)))
     (home-page "https://community.kde.org/KDEConnect")
