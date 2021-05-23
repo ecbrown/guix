@@ -2055,7 +2055,7 @@ script files.")
        ("qt" ,qtbase-5)
        ,@(package-inputs octave-cli)))
     (native-inputs
-     `(("qttools" , qttools) ;for lrelease
+     `(("qttools" , qttools-5) ;for lrelease
        ("texlive" ,(texlive-union (list texlive-epsf))) ; for texi2dvi
        ,@(package-native-inputs octave-cli)))
     (arguments
