@@ -57,14 +57,14 @@
 (define-public parallel
   (package
     (name "parallel")
-    (version "20210422")
+    (version "20210522")
     (source
      (origin
       (method url-fetch)
       (uri (string-append "mirror://gnu/parallel/parallel-"
                           version ".tar.bz2"))
       (sha256
-       (base32 "1s4ynlsh5fr5vxcf5xm45fcfyzp62zclzjq5b7rbwrs4chxnlgmy"))))
+       (base32 "1qdgywilyy2vy8lcl7f5qa7cm0b2ddnwwx9n8xcfbv9wj0z3wrpg"))))
     (build-system gnu-build-system)
     (arguments
      `(#:phases
@@ -138,7 +138,7 @@ execution is also possible.")
 (define-public slurm
   (package
    (name "slurm")
-   (version "20.11.3")
+   (version "20.11.7")
    (source (origin
             (method url-fetch)
             (uri (string-append
@@ -146,7 +146,7 @@ execution is also possible.")
                   version ".tar.bz2"))
             (sha256
              (base32
-              "1s70x6yh60sx63dgmp5rlhq8jcz7kxv9pk8gbs9v1jg8zps5h5bk"))
+              "1fdjihg1x7ks5l77yjv14a4mg6r0v8c3zk1dcxkhrhq3n4dc9nbs"))
             (modules '((guix build utils)))
             (snippet
              '(begin
