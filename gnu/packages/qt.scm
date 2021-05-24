@@ -799,6 +799,35 @@ HostData=lib/qt5
     (description "The QtSvg module provides classes for displaying the
  contents of SVG files.")))
 
+(define-public qt5compat
+  (package (inherit qtsvg)
+    (name "qt5compat")
+    (version "6.1.0")
+    (source (origin
+             (method url-fetch)
+             (uri (qt5-urls name version))
+             (sha256
+              (base32
+               "0g6jiw620k02p96mzdkv21frwcgcf4bjggainawbif024z5fdmy7"))
+             (modules '((guix build utils)))
+;;             (snippet
+;;              '(begin
+;;                 (delete-file-recursively "tests/3rdparty")
+;;                 ;; the scion test refers to the bundled 3rd party test code.
+;;                 (substitute* "tests/auto/auto.pro"
+;;                   (("scion") "#"))
+;;                 #t))
+             ))
+    (native-inputs `(("perl" ,perl)))
+    (inputs
+     `(("icu4c" ,icu4c)
+       ("libxkbcommon" ,libxkbcommon)
+       ("qtbase" ,qtbase)
+       ("qtdeclarative" ,qtdeclarative)))
+    (synopsis "Qt 5 Compatibility module")
+    (description "The Qt Compatibility module provides contains 
+unsupported Qt 5 APIs.")))
+
 (define-public qtimageformats
   (package (inherit qtsvg)
     (name "qtimageformats")
