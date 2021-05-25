@@ -1884,6 +1884,46 @@ function.  It uses C++ overloading to record arithmetic operations, which it
 plays back later in various ways to calculate the requested values.")
     (license license:epl1.0)))
 
+(define-public psopt
+  (package
+    (name "psopt")
+    (version "5.0.0")
+    (source (origin
+              (method git-fetch)
+              (uri (git-reference
+                    (url "https://github.com/PSOPT/psopt")
+                    (commit version)))
+              (file-name (git-file-name name version))
+              (sha256
+               (base32
+                "0y56lag51xdmpcak0wydzrkghypfn884nw8rd62gwgzgxgz0ls9f"))))
+    (build-system cmake-build-system)
+    (arguments
+     `(#:tests? #f ; no test suite
+       #:configure-flags
+       `(,(string-append "-Dadolc_INCLUDE_DIR="
+                         (assoc-ref %build-inputs "adol-c") "/include")
+         ,(string-append "-Dadolc_LIBRARY="
+                         (assoc-ref %build-inputs "adol-c") "/lib"))))
+    (native-inputs
+     `(("python-2" ,python-2)
+       ("pkg-config" ,pkg-config)))
+    (inputs
+     `(("adol-c" ,adol-c)
+       ("colpack" ,colpack)
+       ("eigen" ,eigen)
+       ("gnuplot" ,gnuplot)
+       ("ipopt" ,ipopt)
+       ("lapack" ,openblas)))
+    (home-page "https://github.com/PSOPT/psopt")
+    (synopsis "Optimal Control Software")
+    (description
+     "PSOPT is an optimal control package written in C++ that uses direct
+collocation methods. These methods solve optimal control problems by
+approximating the time-dependent variables using global or local
+polynomials.")
+    (license license:lgpl2.1)))
+
 (define-public libflame
   (package
     (name "libflame")
