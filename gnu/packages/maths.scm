@@ -1827,6 +1827,35 @@ linear and quadratic objectives.  There are limited facilities for nonlinear
 and quadratic objectives using the Simplex algorithm.")
     (license license:epl1.0)))
 
+(define-public colpack
+  ;; The latest tagged release is 3 years old and there have been
+  ;; unreleased fixes, so we take the last commit.
+  (let ((commit "f328cad4141c4c6e3e30a58efcbcdacf8849124e")
+        (revision "1"))
+  (package
+    (name "colpack")
+    (version (git-version "1.0.10" revision commit))
+    (source (origin
+              (method git-fetch)
+              (uri (git-reference
+                    (url "https://salsa.debian.org/science-team/colpack.git")
+                    (commit "f328cad4141c4c6e3e30a58efcbcdacf8849124e")))
+              (file-name (git-file-name name version))
+              (sha256
+               (base32
+                "1c7i2gm28hjpgv3qjavmbd488q3zdxfnx10w193v3xxhincfcxl6"))))
+    (build-system cmake-build-system)
+    (arguments
+     '(#:configure-flags '("-DENABLE_OPENMP=ON")))
+    (home-page "http://cscapes.cs.purdue.edu/coloringpage/")
+    (synopsis "Graph Coloring Algorithm package")
+    (description
+     "The overall aim of this project is to exploit the sparsity available in
+large-scale Jacobian and Hessian matrices the best possible way in order to
+make their computation using automatic differentiation (AD) (or finite
+differences) efficient.")
+    (license license:bsd-3))))
+
 (define-public libflame
   (package
     (name "libflame")
