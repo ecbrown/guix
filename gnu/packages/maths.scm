@@ -1795,6 +1795,37 @@ large-scale nonlinear optimization.  It provides C++, C, and Fortran
 interfaces.")
     (license license:epl1.0)))
 
+(define-public cbc
+  (package
+    (name "cbc")
+    (version "2.10.5")
+    (source (origin
+              (method url-fetch)
+              (uri (string-append "https://www.coin-or.org/download/source/"
+                                  "Cbc/Cbc-" version ".tgz"))
+              (sha256
+               (base32
+                "0wk9vr6zc62gw71v7gnra5wxqlcljcgbhm5lasx236v791b986ns"))
+              (modules '((guix build utils)))
+              (snippet
+               ;; Make sure we don't use the bundled software.
+               '(begin
+                  (delete-file-recursively "ThirdParty")
+                  #t))))
+    (build-system gnu-build-system)
+    (native-inputs
+     `(("gfortran" ,gfortran)
+       ("pkg-config" ,pkg-config)))
+    (inputs
+     `(("openblas" ,openblas)))
+    (home-page "https://www.coin-or.org")
+    (synopsis "Branch-and-Cut solver")
+    (description
+     "Cbc (Coin-or branch and cut) is an open-source mixed integer linear
+programming solver written in C++. It can be used as a callable library or
+using a stand-alone executable.")
+    (license license:epl1.0)))
+
 (define-public clp
   (package
     (name "clp")
