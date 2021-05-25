@@ -1856,6 +1856,34 @@ make their computation using automatic differentiation (AD) (or finite
 differences) efficient.")
     (license license:bsd-3))))
 
+(define-public adol-c
+  (package
+    (name "adol-c")
+    (version "2.7.2")
+    (source (origin
+              (method url-fetch)
+              (uri (string-append
+                    "https://www.coin-or.org/download/source/ADOL-C/ADOL-C-"
+                    version".tgz"))
+              (sha256
+               (base32
+                "1hw2ayv91rk8s24dnx70i70vg66rwnvyb8pa7pmv4i6wkzirhawh"))))
+    (build-system gnu-build-system)
+    (arguments
+     `(#:configure-flags `("--enable-sparse")))
+    (native-inputs
+     `(("gfortran" ,gfortran)))
+    (inputs
+     `(("colpack" ,colpack)
+       ("lapack" ,openblas)))
+    (home-page "https://www.coin-or.org")
+    (synopsis "Automatic Differentiation of Algorithms")
+    (description
+     "The ADOLC system automatically calculates exact derivatives of a C/C++
+function.  It uses C++ overloading to record arithmetic operations, which it
+plays back later in various ways to calculate the requested values.")
+    (license license:epl1.0)))
+
 (define-public libflame
   (package
     (name "libflame")
